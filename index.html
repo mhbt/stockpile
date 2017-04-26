@@ -3,13 +3,39 @@
     <title>Stockpile-Home</title>
     <meta charset = 'utf-8'>
     <meta name ="viewport" content = "width=device-width, initial-scale =1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <style>
-        .jumbotron {
+        .input-group {
+            margin-top: 17px;
+        }
+        .navbar li a, .navbar .navbar-brand {
+              color: #fff !important;
+          }
+          .navbar-nav li a:hover, .navbar-nav li.active a {
+             // color: #f4511e !important;
+              background-color: #fff !important;
+          }
+          .navbar-default .navbar-toggle {
+              border-color: transparent;
+              color: #fff !important;
+              
+          }
+        .navbar-default .glyphicon-login {
+            color: white !important;
+        }
+        .navbar-default {
             background-color: #f4511e !important ;#E44424!important;
             color: white !important;
             padding: 1.5% !important;
-            margin-bottom: 0% !important;
+            margin-bottom: 2% !important;
         }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+              text-align: center;
+              margin: 25px 0;
+            }
+          }
         .no-pm {
             padding:0 !important;
             margin: 0 !important;
@@ -64,7 +90,7 @@
         }
         
         .panel {
-                border: 1px solid #f4511e; 
+                border: 1px solid #f4511e !important; 
                 border-radius:0;
             transition: box-shadow 0.5s;
         }
@@ -115,6 +141,7 @@
             height: 100%;
             width : 100%;
             padding: 0 !important;
+            padding-top: 90px !important;
             margin: 0 !important;
         }
         .footer {
@@ -126,6 +153,19 @@
             background-color: #f4511e;
             padding: 50px !important;
             margin: 0 !important;
+        }
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+
+        .jumbotron {
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar {
+            font-family: Montserrat, sans-serif;
         }
         
     </style>
@@ -140,13 +180,14 @@
 </head>
 <body>
     <header>
-        <div class = 'jumbotron'>
-            <div class = 'row'>
-                <div class = 'col-sm-6'>
-                    <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2>
+        <nav class = "navbar navbar-default navbar-fixed-top">
+            <div class = "container">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#login"><span class = "glyphicon glyphicon-log-in"></span></button>
+                    <a class = "navbar-brand" href = "index.html"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
                 </div>
-                <div class = 'col-sm-6 float-right'>
-                    <form class = 'form-inline float-right'>
+                <div class = "collapse navbar-collapse" id = "login">
+                 <form class = 'form-inline float-right'>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input  type="text" class="form-control"  placeholder="username">
@@ -164,10 +205,10 @@
                     </form>
                     
                 </div>
-               
             </div>
-        </div>
+        </nav>
     </header>
+        
     <section class = "container-fluid sections-wrapper">
         <div class = 'container container-left'>
             <nav>
@@ -257,7 +298,7 @@
             </div>
     
     <div class = "container container-right featured-products">
-        <h2 class = 'text-center'>Try Our Featured <span class = "glyphicon glyphicon-flag"></span>roducts</h2>
+        <h2 class = 'text-center'>Try Our Featured <span class = "glyphicon glyphicon-flag"></span>roducts<bold>!</bold></h2>
         <div class = "row">
             <div class = "col-sm-3">
                 <div class = "panel panel-default text-center">
@@ -382,7 +423,8 @@
     
     <footer>
         <div class = "container footer">
-            <small>copyrights &copy;stockpile.Inc</small>
+            <small>copyrights &copy;stockpile.Inc 2017</small>
         </div>
     </footer>
+
 </body>
