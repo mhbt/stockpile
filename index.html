@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<head>
+    <title>Stockpile-Home</title>
+    <meta charset = 'utf-8'>
+    <meta name ="viewport" content = "width=device-width, initial-scale =1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <style>
+        .input-group {
+            margin-top: 17px;
+        }
+        .navbar li a, .navbar .navbar-brand {
+              color: #fff !important;
+          }
+          .navbar-nav li a:hover, .navbar-nav li.active a {
+             // color: #f4511e !important;
+              background-color: #fff !important;
+          }
+          .navbar-default .navbar-toggle {
+              border-color: transparent;
+              color: #fff !important;
+              
+          }
+        .navbar-default .glyphicon-login {
+            color: white !important;
+        }
+        .navbar-default {
+            background-color: #f4511e !important ;#E44424!important;
+            color: white !important;
+            padding: 1.5% !important;
+            margin-bottom: 2% !important;
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+              text-align: center;
+              margin: 25px 0;
+            }
+          }
+        .no-pm {
+            padding:0 !important;
+            margin: 0 !important;
+        }
+        .float-right {
+            float:right !important;
+        }
+      .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin:auto;
+    }
+        .glyphicon-chevron-right, .glyphicon-chevron-left, .carousel-indicators li {
+            color: #f4511e;
+        }
+        .caret {
+            float:right;
+            margin:auto;
+            margin-top: 7px;
+        }
+        .li-orange a{
+            color:#f4511e !important;
+        }
+        .li-orange a:hover {
+            background-color: #f4511e !important;
+            color:white !important;
+            letter-spacing: 2px;
+            transition: background-color 3s;
+        }
+        .container-left {
+            float: left !important;
+            width: 20% !important;
+            padding: 0 !important;
+            height:  1330px !important;
+            
+        }
+        .container-right {
+            float: left !important;
+            width: 80% !important;
+            padding: 0 !important;
+            margin:  0 !important;
+           
+        }
+        .carousel-indicators li {
+              border-color: #f4511e !important;
+          }
+          .carousel-indicators li.active {
+              background-color: #f4511e;
+          }
+        .featured-products {
+           padding: 5px !important;
+        }
+        
+        .panel {
+                border: 1px solid #f4511e !important; 
+                border-radius:0;
+            transition: box-shadow 0.5s;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+
+        .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: #f4511e !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel-footer {
+            background-color: #fff !important;
+        }
+
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+        }
+        .featured-products h2 {
+            color: #f4511e;
+        }
+        .sections-wrapper {
+            height: 100%;
+            width : 100%;
+            padding: 0 !important;
+            padding-top: 90px !important;
+            margin: 0 !important;
+        }
+        .footer {
+            height: 100px !important;
+            width: 100% !important;
+            float:none;
+            text-align: center;
+            color:white;
+            background-color: #f4511e;
+            padding: 50px !important;
+            margin: 0 !important;
+        }
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+
+        .jumbotron {
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar {
+            font-family: Montserrat, sans-serif;
+        }
+        
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class = "navbar navbar-default navbar-fixed-top">
+            <div class = "container">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#login"><span class = "glyphicon glyphicon-log-in"></span></button>
+                    <a class = "navbar-brand" href = "index.html"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                </div>
+                <div class = "collapse navbar-collapse" id = "login">
+                 <form class = 'form-inline float-right'>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  type="text" class="form-control"  placeholder="username">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                          </div>
+                        
+                        <div class="input-group">
+                          <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-log-in"></i>
+                          </button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+        
+    <section class = "container-fluid sections-wrapper">
+        <div class = 'container container-left'>
+            <nav>
+                <ul class = 'nav nav-bar nav-stacked  li-orange'>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                      </li>
+                </ul>
+            </nav>
+        </div>
+    <div class = 'container container-right'>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                   </ol>
+
+                <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="http://www.wepostmag.com/wp-content/uploads/2015/12/shooping.jpg" alt="Chania" width="460" height="200">
+                      </div>
+
+                      <div class="item">
+                        <img src="https://www.hotelzurpost.info/wp-content/uploads/2015/11/shooping_sightseeing.jpg" alt="Chania" width="460" height="200">
+                      </div>
+                        <div class="item">
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8_XhdS51_FmvFB1So-rJ7iz7yLMShJQ00jc3BqSejAou-ceV8LQ" alt="Chania" width="460" height="200">
+                          </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+    
+    <div class = "container container-right featured-products">
+        <h2 class = 'text-center'>Try Our Featured <span class = "glyphicon glyphicon-flag"></span>roducts<bold>!</bold></h2>
+        <div class = "row">
+            <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+                <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+            <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+            <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+        
+            </div>
+        <div class = "row">
+            <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+                <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+            <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+            <div class = "col-sm-3">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> $90</h3>
+                        <button class = "btn btn-lg btn-danger">Buy</button>
+                    </div>
+                </div>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class = "container footer">
+            <small>copyrights &copy;stockpile.Inc 2017</small>
+        </div>
+    </footer>
+
+</body>
