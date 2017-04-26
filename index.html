@@ -92,7 +92,7 @@
         .panel {
                 border: 1px solid #f4511e !important; 
                 border-radius:0;
-            transition: box-shadow 0.5s;
+            transition: box-shadow 0.3s;
         }
 
         .panel:hover {
@@ -167,7 +167,20 @@
         .navbar {
             font-family: Montserrat, sans-serif;
         }
-        
+        #sign-up button {
+            margin:auto;
+            width: 99%;
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+            transition :box-shadow 0.3s
+        }
+        #sign-up .btn:hover, #sign-up .btn-default:hover{
+            border: 1px solid #f4511e !important;
+            background-color: #fff;
+            color: #f4511e;
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
     </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -258,7 +271,8 @@
                           <li><a href="#">Nokia</a></li> 
                         </ul>
                       </li>
-                      </li>
+                    <br>
+                    <a id = "sign-up" href= "sign_up.html"><button  class = "btn btn-default btn-long btn-lg">Sign Up</button></a>
                 </ul>
             </nav>
         </div>
@@ -423,7 +437,7 @@
     
     <footer>
         <div class = "container footer">
-            <small>copyrights &copy;stockpile.Inc 2017</small>
+            <small>copyrights &copy; stockpile.Inc 2017</small>
         </div>
     </footer>
 
