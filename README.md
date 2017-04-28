@@ -1,5 +1,6 @@
 # stockpile
 4th semsester Database project
+# rules : Don't commit as master , commit using ur name. and pull from master first.
 
 Statement:
     An online marketing system in which user is presented with a market portal which has the ability to let user view the items, get registered and buy item/s. admin team manages the inventory and process the user buy request.

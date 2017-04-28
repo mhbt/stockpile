@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <title>Stockpile-Home</title>
+    <meta charset = 'utf-8'>
+    <meta name ="viewport" content = "width=device-width, initial-scale =1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <style>
+        .navbar .dropdown {
+            margin-top: 17px;
+            
+        }
+        .navbar .dropdown-menu a:hover {
+            color: white !important;
+              background-color: #f4511e !important;
+        }
+        .navbar li a, .navbar .navbar-brand {
+              color: #fff !important;
+          }
+        .navbar li a:hover {
+            background-color: white !important;
+            color: #f4511e !important;
+            border-radius: 3px !important;
+        }
+          .navbar li a:hover, .navbar li a:active {
+             color: #f4511e !important;
+              background-color: #fff !important;
+          }
+          .navbar-default .navbar-toggle {
+              border-color: transparent;
+              color: #fff !important;
+              
+          }
+        .navbar-default .glyphicon-user {
+            color: white !important;
+        }
+        .navbar-default {
+            background-color: #f4511e !important ;#E44424!important;
+            color: white !important;
+            padding: 1.5% !important;
+            margin-bottom: 2% !important;
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+              text-align: center;
+              margin: 25px 0;
+            }
+           
+          }
+        .no-pm {
+            padding:0 !important;
+            margin: 0 !important;
+        }
+        .float-right {
+            float:right !important;
+        }
+        .navbar .dropdown-menu a{
+            color: #f4511e !important;
+        }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class = "navbar navbar-default navbar-fixed-top">
+            <div class = "container">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#user"><span class = "glyphicon glyphicon-user"></span></button>
+                    <a class = "navbar-brand" href = "index.html"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                </div>
+                <div class = "collapse navbar-collapse navbar-right" id = "user">
+                  <ul class = 'nav nav-bar nav-stacked  li-orange'>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "down"href="#">First Name
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a href = "index.html"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp; Logout </a></li>
+                        </ul>
+                      </li>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
