@@ -1,0 +1,1 @@
+place this folder in wamp64/bin/mysql/mysql5.*.**/data/
