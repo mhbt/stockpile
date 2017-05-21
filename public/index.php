@@ -58,7 +58,7 @@
                      </ul>
                    </li>
                  <br>
-                 <a id = "sign-up" href= "sign_up.html"><button  class = "btn btn-default btn-long btn-lg">Sign Up</button></a>
+                 <a id = "sign-up" href= "sign_up.php"><button  class = "btn btn-default btn-long btn-lg">Sign Up</button></a>
              </ul>
          </nav>
      </div>

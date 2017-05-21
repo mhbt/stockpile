@@ -23,7 +23,7 @@
             <div class = "container">
                 <div class = "navbar-header">
                     <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#login-form"><span class = "glyphicon glyphicon-log-in"></span></button>
-                    <a class = "navbar-brand" href = "index.html"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                    <a class = "navbar-brand" href = "index.php"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
                 </div>
                 <div class = "collapse navbar-collapse" id = "login-form">
                  <form class = 'form-inline float-right'>
@@ -37,7 +37,7 @@
                           </div>
 
                         <div class="input-group">
-                          <a href = "login_header.html" class = "btn btn-default">Log In
+                          <a href = "index.php" class = "btn btn-default">Log In
                             <i class="glyphicon glyphicon-log-in"></i>
                               </a>
                         </div>

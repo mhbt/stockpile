@@ -50,85 +50,58 @@
     </style>
 </head>
 <body>
-<?php 
-    
-    if (isset($_POST["submit"]))
-    {
-        include_once ("../assets/scripts/php/db.php");
-        
-        $login_details = "INSERT INTO "
-    }
-
-
-?>
     <section class = "container">
         <div class = "jumbotron text-center">
-            <h2><a href = "index.html">  STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</a></h2>
-        </header>
-        <form method = "POST" action = "sign_up.php">
-            <field>
-                <legend>Sign Up</legend>
-                <small>Login Details</small>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input  name = "username"  type="text" class="form-control"  placeholder="username" required>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input name = "password" type="password" class="form-control"  placeholder="password"  required>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
-                    <input name = "confirm_password" type="password" class="form-control"  placeholder="confirm password"  required>
-                </div>
-                <br>
-                  <small>Personal Information</small>
-                    <div class="input-group">
-                        <span class="input-group-addon">First Name</span>
-                        <input name = "fname" type="text" class="form-control"  placeholder=""  required>
-                    </div>
-                     <div class="input-group">
-                        <span class="input-group-addon">Last Name</span>
-                        <input name = "lname" type="text" class="form-control"  placeholder=""  required>
-                    </div>
-                <br>
-                <small>Contact Information</small>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class = "glyphicon glyphicon-envelope"></i></span>
-                    <input name = "email" type="email" class="form-control"  placeholder="email"  required>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class = "glyphicon glyphicon-phone"></i></span>
-                    <input name = "phone" type="number" class="form-control"  placeholder="phone"  required>
-                </div>
-                <br>
-                <small>Address
-                Information</small>
-                 <div class="input-group">
-                    <span class="input-group-addon">House #</span>
-                    <input name = "house" type="text" class="form-control"  placeholder=""  required>
-                </div>
-                 <div class="input-group">
-                    <span class="input-group-addon">Street #</span>
-                    <input name = "street" type="text" class="form-control"  placeholder=""  required>
-                </div>
-                 <div class="input-group">
-                    <span class="input-group-addon"> City </span>
-                    <input name = "city" type="text" class="form-control"  placeholder=""  required>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon">Zip</span>
-                    <input name = "zip" type="number" class="form-control"  placeholder=""  required>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon">Country</span>
-                    <input name = "country" type="text" class="form-control"  placeholder=""  required>
-                </div>
-            </field>
-            <br>
-            <div class = "input-group center">
-                <button  type = "submit" name = "submit" class = "btn btn-primary btn-lg">Sign Up</button>
-            </div>
-        </form>
-    </div>
+            <h2><a href = "index.php">  STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</a></h2>
+        <?php 
+    
+            if (isset($_POST["submit"]))
+            {
+                include_once ("../assets/scripts/php/db.php");
+                //getting values from post method _POST;
+                $username = strtolower($_POST['username']);
+                $password = md5($_POST['password']);
+                $email = strtolower($_POST['email']);
+                $login_details = "INSERT INTO user VALUES ('{$username}', '{$password}','{$email}', 'customer')";
+                
+               $fname = strtolower($_POST['fname']);
+                $lname = strtolower($_POST['lname']);
+                $phone = $_POST['phone'];
+
+                $customer_details = "INSERT INTO customer VALUES ('{$username}', '{$fname}','{$lname}', '{$phone}')";
+
+                $street =strtolower( $_POST['street']);
+                $house = strtolower($_POST['house']);
+                $zip = $_POST['zip'];
+                $city = strtolower($_POST['city']);
+                $state = strtolower($_POST['state']);
+                $country = strtolower($_POST['country']);
+                //confirming if username is available
+                $query = "select username from user";
+                $result = $db->query($query);
+                $row = $result->fetch_assoc();
+                $address_details = "INSERT INTO customer_address VALUES ('{$username}', '{$street}','{$house}', '{$zip}', '{$city}','{$state}', '{$country}')";
+                if ($username == $row['username'])
+                {
+                    echo("<h2>username is not available</h2>");
+                    include_once ("../assets/scripts/php/sign_up_form.php");
+                    die ();
+                }
+                
+                $success1 = $db->query($login_details);
+                $success2 = $db->query($customer_details);
+                $success3 = $db->query($address_details);
+                echo "<h2>Welcome to Stockpile. Happy Shopping!</h2>";
+                echo "<a href = \"index.php\">Continue to login page...</a>";
+            }
+            else {
+                include_once ("../assets/scripts/php/sign_up_form.php");
+            }
+
+
+        ?>
+            
+            
+        </div>
+    </section>
 </body>

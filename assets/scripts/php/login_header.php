@@ -23,7 +23,7 @@
             <div class = "container">
                 <div class = "navbar-header">
                     <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#user"><span class = "glyphicon glyphicon-user"></span></button>
-                    <a class = "navbar-brand" href = "index.html"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                    <a class = "navbar-brand" href = "index.php"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
                 </div>
                 <div class = "collapse navbar-collapse navbar-right" id = "user">
                   <ul class = 'nav nav-bar nav-stacked  li-orange'>
@@ -31,7 +31,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "down"href="#">First Name
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu text-center">
-                            <li><a href = "index.html"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp; Logout </a></li>
+                            <li><a href = "index.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp; Logout </a></li>
                         </ul>
                       </li>
 
