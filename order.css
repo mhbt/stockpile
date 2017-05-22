@@ -1,0 +1,268 @@
+            .navbar li a, .navbar .navbar-brand {
+                  color: #fff !important;
+              }
+              .navbar-nav li a:hover, .navbar-nav li.active a {
+                 // color: #f4511e !important;
+                  background-color: #fff !important;
+              }
+              .navbar-default .navbar-toggle {
+                  border-color: transparent;
+                  color: #fff !important;
+                  
+              }
+            .navbar-default .glyphicon-login {
+                color: white !important;
+            }
+            .navbar-default {
+                background-color: #f4511e !important;
+                color: white !important;
+                padding: 1.5% !important;
+                margin-bottom: 2% !important;
+            }
+            @media screen and (max-width: 768px) {
+                .col-sm-4 {
+                  text-align: center;
+                  margin: 25px 0;
+                }
+                .navbar-default .input-group {
+                    float: right;
+                }
+              }
+            .no-pm {
+                padding:0 !important;
+                margin: 0 !important;
+            }
+            .float-right {
+                float:right !important;
+            }
+         
+            .glyphicon-chevron-right, .glyphicon-chevron-left, .carousel-indicators li {
+                color: #f4511e;
+            }
+        
+            .container-left {
+                float: left !important;
+                width: 20% !important;
+                padding: 0 !important;
+                height:  1330px !important;
+                
+            }
+            .container-right {
+                float: left !important;
+                width: 80% !important;
+                padding: 0 !important;
+                margin:  0 !important;
+               
+            }
+            .sections-wrapper {
+                height: 100%;
+                width : 100%;
+                padding: 0 !important;
+                padding-top: 90px !important;
+                margin: 0 !important;
+            }
+            .footer {
+                height: 100px !important;
+                width: 100% !important;
+                float:none;
+                text-align: center;
+                color:white;
+                background-color: #f4511e;
+                padding: 50px !important;
+                margin: 0 !important;
+            }
+            body {
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+            }
+
+            .jumbotron {
+                font-family: Montserrat, sans-serif;
+            }
+
+            .navbar {
+                font-family: Montserrat, sans-serif;
+            }
+            #sign-up button {
+                margin-top: 10px;
+                margin:auto;
+                width: 99%;
+                margin: 15px 0;
+                color: #fff;
+                transition :box-shadow 0.3s
+            }
+            #sign-up .btn:hover, #sign-up .btn-default:hover{
+                border: 1px solid #f4511e !important;
+                background-color: #fff;
+                color: #f4511e;
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+            .btn-default  {
+                color:#f4511e !important;
+            }
+
+            #logout button{
+                margin:auto;
+                width: 99%;
+                font-size: 10px;
+                margin: 15px 0;
+                color: #fff;            
+                transition :box-shadow 0.3s
+            }
+
+            #logout .btn:hover{
+                border: 1px solid #f4511e !important;
+                background-color: #fff;
+                color: #f4511e;
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+
+
+            .sections-wrapper h2 {
+                color: #f4511e;
+                text-decoration: none;
+                font-family: serif;
+            }
+
+            .sections-wrapper table, th, td {
+                border: 1px solid black;
+                 border-collapse: collapse;
+            }
+
+            .section-wrapper th, td {
+                padding: 15px;
+            }
+
+            .sections-wrapper h4 {
+                color: #f4511e;
+                font-size: 25px;
+                text-decoration: none;
+                font-family: serif;
+            }
+
+            .sections-wrapper table{
+                width: 95%;
+            }
+
+            .sections-wrapper th, .sections-wrapper td {
+                padding: 15px;
+                font-family: sans-serif;
+                border-collapse: collapse;
+                text-align: left;
+                border-style: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .sections-wrapper tr:nth-child(odd) {background-color: #f2f2f2}
+
+            .sections-wrapper tr:hover {
+                background-color: gray;
+                color: white;
+                font-style: italic;
+
+            }
+
+            .sections-wrapper th {
+                background-color: #f4511e;
+                color: white;
+            }
+
+            .sections-wrapper .Decline-button{
+                float: right;
+                margin-right: 5%;
+            }
+
+            .sections-wrapper .Accept-button {
+                width: 15%;
+                margin:auto;
+                margin: 15px, 0;
+                background-color: #fff;
+                color: #f4511e;    
+                border-width: thin;         
+            }
+
+            .sections-wrapper .Accept-button:hover {
+               border: 1px solid #f4511e !important;
+                background-color: #fff;
+                color: #f4511e;
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+
+            .sections-wrapper .Decline-button {
+                width: 15%;
+                background-color: #fff;
+                color: #f4511e;    
+                border-width: thin;         
+            }
+
+            .sections-wrapper .Decline-button:hover {
+               border: 1px solid #f4511e !important;
+                background-color: #fff;
+                color: #f4511e;
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+
+            .sections-wrapper .Next-button{
+                width: 15%;
+                margin-left: 25%;
+                background-color: #fff;
+                color: #f4511e;    
+                border-width: thin;
+            }
+
+            .sections-wrapper .Next-button:hover {
+                border: 1px solid #f4511e !important;
+                background-color: #fff;
+                color: #f4511e;
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+
+            .dropbtn {
+        background-color:#f4511e;
+        color: white;
+        padding: 16px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: white}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: white;
+        color: #f4511e;
+    }
+
+   

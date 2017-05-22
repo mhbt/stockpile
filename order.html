@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Order-Manager</title>
+    <meta charset = 'utf-8'>
+    <meta name ="viewport" content = "width=device-width, initial-scale =1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/order.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class = "navbar navbar-default navbar-fixed-top">
+            <div class = "container">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#login-form"><span class = "glyphicon glyphicon-log-in"></span></button>
+                    <a class = "navbar-brand" > <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                </div>
+                <div class = "collapse navbar-collapse" id = "login-form">
+                     <div class = 'form-inline float-right'>
+                        <div class="dropdown">
+                            <button class="dropbtn">Name </button>
+                            <div class="dropdown-content">
+                                <a href="index.html" >logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class = "container-fluid sections-wrapper">
+        <div class = 'container container-left'>
+             <nav>
+                <ul class = 'nav nav-bar nav-stacked  li-orange'>
+                    <a id = "sign-up" href= "order.html"><button  class = "btn btn-default btn-lg">Orders</button></a>
+                </ul>
+            </nav>
+        </div>
+        <div class = 'container container-right'>
+            <h2 style= "text-align:center"> <b>Order Manager </b></h2><br>
+            <h4><b>Customer Information </b></h4>
+            <table>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Phone#</th>
+                    <th>Address</th>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>M. Moiz Hussain</td>
+                    <td>0307-7046968</td>
+                    <td>411-a block A sabzazar scheme multan road lahore</td>
+                </tr>
+            </table>
+            <br>
+            <h4><b>Product Information</b></h4>
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Manufacturer</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Laptop</td>
+                    <td>02</td>
+                    <td>Apple</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Mobile</td>
+                    <td>04</td>
+                    <td>Samsung</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>laptop</td>
+                    <td>03</td>
+                    <td>Toshiba</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Mobile</td>
+                    <td>01</td>
+                    <td>Apple</td>
+                </tr>
+               
+            </table>
+            <br><br>
+            <div class= "button">
+                <a href="index.html"><button class = "Accept-button btn-default btn-lg" type="button" >Accept</button></a>
+                <a href="index.html"><button class = "Decline-button btn-default btn-lg" type="button" >Decline</button></a>
+                <a href="order.html"><button class = "Next-button btn-default btn-lg"> Next >> </button></a>
+            </div>
+             
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class = "container footer">
+            <small>copyrights &copy; stockpile.Inc 2017</small>
+        </div>
+    </footer>
+
+</body>
