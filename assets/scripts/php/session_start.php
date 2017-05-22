@@ -8,7 +8,7 @@
         . "WHERE username = '{$username}'";
     $result = $db->query($query);
 echo $query;
-    if (mysqli_num_rows($result) >= 0)
+    if (mysqli_num_rows($result) > 0)
     {
         echo mysqli_num_rows($result);
         $data = $result->fetch_assoc();
@@ -19,14 +19,13 @@ echo $query;
         }
         else
         {
-            global $password_matched;
-            $password_matched = false;
+            
+            setcookie('login_failed',$password,time() + 1,'/');
              header("Location:../../../public/index.php");
         }
     }
     else {
-        global $user_exist;
-        $user_exist = false;
+        setcookie('login_failed','failed',time() + 1,'/');
          header("Location:../../../public/index.php");
     }
 ?>

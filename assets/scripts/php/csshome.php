@@ -183,4 +183,25 @@
     .navbar .btn-default  {
         color:#f4511e !important;
     }
+    /*styling for user*/
+    .user-jumbotron{
+        width : 70%;
+        margin: auto !important;
+        margin-top: 4% !important;
+        margin-bottom: 4% !important;
+        text-align: center;
+        background-color: rgba(244,81,30,0.01) !important;
+        box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
+        border-left: 10px solid #f4511e;
+        border-top: 1px solid #f4511e;
+        
+    }
+    .user-jumbotron .table-hover tr:hover{
+        color: #fff;
+        background-color: rgba(244,81,30,0.5);
+    }
+    .btn-request {
+        margin-top: 25px;
+        float:right !important;
+    }
 </style>

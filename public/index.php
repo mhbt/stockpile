@@ -10,7 +10,7 @@
      <!--<?php  var_dump($GLOBALS); ?>-->
      <div class = 'container container-left'>
           <nav>
-             <ul class = 'nav nav-bar nav-stacked  li-orange'>
+             <ul class = 'nav nav-stacked  li-orange'>
                  <li class="dropdown">
                      <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
                          <span class="caret"></span></a>

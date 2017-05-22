@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Stockpile-Home</title>
+    <title>Stockpile</title>
     <meta charset = 'utf-8'>
     <meta name ="viewport" content = "width=device-width, initial-scale =1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@
                             <input  type="password" class="form-control" name="password" placeholder="Password">
                           </div>
                      <?php
-                        if (isset($user_exist) || isset($password_matched))
+                        if (isset($_COOKIE["login_failed"]))
                         {
                             echo "<div class=\"input-group\">
                             <kbd>Wrong Username or Password</kbd>
