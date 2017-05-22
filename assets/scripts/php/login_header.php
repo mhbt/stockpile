@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
     <title>Stockpile-Home</title>
@@ -28,10 +29,15 @@
                 <div class = "collapse navbar-collapse navbar-right" id = "user">
                   <ul class = 'nav nav-bar nav-stacked  li-orange'>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "down"href="#">First Name
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "down"href="#"><?php 
+                                if (isset($_COOKIE))
+                                {
+                                    echo "{$_COOKIE['username']}";
+                                }
+                            ?>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu text-center">
-                            <li><a href = "index.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp; Logout </a></li>
+                            <li><a href = "../assets/scripts/php/session_end.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout </a></li>
                         </ul>
                       </li>
 

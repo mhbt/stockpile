@@ -1,14 +1,13 @@
 <?php
-  $login_flag = 'true';
-  if ($login_flag) {
+  if (isset($_COOKIE['username'])) {
     include_once("../assets/scripts/php/login_header.php");
   }
   else {
     include_once("../assets/scripts/php/visitor_header.php");
   }
  ?>
-
  <section class = "container-fluid sections-wrapper">
+     <!--<?php  var_dump($GLOBALS); ?>-->
      <div class = 'container container-left'>
           <nav>
              <ul class = 'nav nav-bar nav-stacked  li-orange'>

@@ -26,20 +26,30 @@
                     <a class = "navbar-brand" href = "index.php"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
                 </div>
                 <div class = "collapse navbar-collapse" id = "login-form">
-                 <form class = 'form-inline float-right'>
+                 <form method = "post" action = "../assets/scripts/php/session_start.php" class = 'form-inline float-right'>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input  type="text" class="form-control"  placeholder="username">
+                            <input name = "username" type="text" class="form-control"  placeholder="username">
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            <input  type="password" class="form-control" name="password" placeholder="Password">
                           </div>
-
+                     <?php
+                        if (isset($user_exist) || isset($password_matched))
+                        {
+                            echo "<div class=\"input-group\">
+                            <kbd>Wrong Username or Password</kbd>
+                        </div>";
+                            unset($user_exist);
+                            unset ($password_matched);
+                        }
+                         
+                     ?>
                         <div class="input-group">
-                          <a href = "index.php" class = "btn btn-default">Log In
+                          <button name = "submit" type = "submit" class = "btn btn-default">Log In
                             <i class="glyphicon glyphicon-log-in"></i>
-                              </a>
+                            </button>
                         </div>
                     </form>
 
