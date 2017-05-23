@@ -57,7 +57,12 @@
                      </ul>
                    </li>
                  <br>
-                 <a id = "sign-up" href= "sign_up.php"><button  class = "btn btn-default btn-long btn-lg">Sign Up</button></a>
+                 <?php
+                 if (!isset($_COOKIE['username']))
+                 {
+                  echo "<a id = \"sign-up\" href= \"sign_up.php\"><button  class = \"btn btn-default btn-long btn-lg\">Sign Up</button></a>";
+                 }
+                 ?>
              </ul>
          </nav>
      </div>

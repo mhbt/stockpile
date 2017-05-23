@@ -21,7 +21,9 @@
         color: white !important;
     }
     .navbar-default {
-        background-color: #f4511e !important;
+       // background-color: #f4511e !important;
+        background-image: url(../assets/images/sign_up_background.jpg);
+        background-position: center;
         color: white !important;
         padding: 1.5% !important;
         margin-bottom: 2% !important;
@@ -59,9 +61,11 @@
         color:#f4511e !important;
     }
     .li-orange a:hover {
-        background-color: #f4511e !important;
+        //background-color: #f4511e !important;
+        background-image: url(../assets/images/sign_up_background.jpg);
+        background-position: right;
         color:white !important;
-        transition: background-color 3s;
+        transition: background-image 3s;
     }
     .container-left {
         float: left !important;
@@ -95,7 +99,7 @@
     }
 
     .panel:hover {
-        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        box-shadow: 10px 10px 10px 10px rgba(244,130,4, .2);
     }
 
     .panel-footer .btn:hover {
@@ -106,7 +110,9 @@
 
     .panel-heading {
         color: #fff !important;
-        background-color: #f4511e !important;
+        //background-color: #f4511e !important;
+        background-image: url(../assets/images/sign_up_background.jpg);
+        background-position: left;
         padding: 25px;
         border-bottom: 1px solid transparent;
         border-top-left-radius: 0px;
@@ -149,7 +155,8 @@
         float:none;
         text-align: center;
         color:white;
-        background-color: #f4511e;
+        background-image: url(../assets/images/sign_up_background.jpg);
+        background-position: bottom;
         padding: 50px !important;
         margin: 0 !important;
     }
@@ -170,15 +177,17 @@
         margin:auto;
         width: 99%;
         margin: 15px 0;
-        background-color: #f4511e;
+        background-image: url(../assets/images/sign_up_background.jpg);
+        background-position: right;
         color: #fff;
         transition :box-shadow 0.3s
     }
     #sign-up .btn:hover, #sign-up .btn-default:hover{
         border: 1px solid #f4511e !important;
         background-color: #fff;
+        background-image: none;
         color: #f4511e;
-        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        box-shadow: 10px 10px 10px rgba(244,81,30, .2);
     }
     .navbar .btn-default  {
         color:#f4511e !important;
@@ -187,14 +196,16 @@
     .user-jumbotron{
         width : 70%;
         margin: auto !important;
-        margin-top: 4% !important;
-        margin-bottom: 4% !important;
+        margin-top: 7% !important;
+        margin-bottom: 7% !important;
         text-align: center;
         background-color: rgba(244,81,30,0.01) !important;
         box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
-        border-left: 10px solid #f4511e;
-        border-top: 1px solid #f4511e;
-        
+        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-left: 1px solid transparent;
+        border-top: 10px solid transparent;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     .user-jumbotron .table-hover tr:hover{
         color: #fff;
