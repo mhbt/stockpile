@@ -34,7 +34,7 @@
                             <?php 
                                 if (isset($_COOKIE))
                                 {
-                                    echo "{$_COOKIE['username']}&nbsp;";
+                                    echo "{$_COOKIE['site_manager']}&nbsp;";
                                 }
                             ?>
                             <span class="caret"></span></a>

@@ -5,6 +5,7 @@
     }
     else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
+        die ();
     }
 ?>
     <section class =  "container-fluid sections-wrapper">

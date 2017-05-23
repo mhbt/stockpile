@@ -14,10 +14,10 @@
         echo $data['password']; 
         if ($data['password'] == $password && ($data['status'] == 'admin' || $data['status'] == 'ordermanager'))
         {
-            setcookie('username',$username,time () + 60 * 60 * 10,'/');
+            setcookie('site_manager',$username,time () + 60 * 60 * 10,'/');
             if ($data['username'] == 'admin')
             {
-                header("Location:../../../public/admin.php");
+                header("Location:../../../public/admin.php?page=add_new_product");
             }
             else {
                 //moiz chui code-header_rabbit.php
