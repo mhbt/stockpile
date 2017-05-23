@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<head>
+    <title>Stockpile-Products</title>
+    <meta charset = 'utf-8'>
+    <meta name ="viewport" content = "width=device-width, initial-scale =1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <style>
+         .caret {
+            float:right;
+            margin:auto;
+            margin-top: 7px;
+        }
+        .navbar .input-group {
+            margin-top: 17px;
+        }
+        .navbar li a, .navbar .navbar-brand {
+              color: #fff !important;
+          }
+          .navbar-nav li a:hover, .navbar-nav li.active a {
+             // color: #f4511e !important;
+              background-color: #fff !important;
+          }
+          .navbar-default .navbar-toggle {
+              border-color: transparent;
+              color: #fff !important;
+              
+          }
+        .navbar-default .glyphicon-login {
+            color: white !important;
+        }
+        .navbar-default {
+            background-color: #f4511e !important ;#E44424!important;
+            color: white !important;
+            padding: 1.5% !important;
+            margin-bottom: 0!important;
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+              text-align: center;
+              margin: 25px 0;
+            }
+            .navbar-default .input-group {
+                float: right;
+            }
+          }
+        .no-pm {
+            padding:0 !important;
+            margin: 0 !important;
+        }
+        .float-right {
+            float:right !important;
+        }
+        .li-orange a{
+            color:#f4511e !important;
+        }
+        .li-orange a:hover {
+            background-color: #f4511e !important;
+            color:white !important;
+            letter-spacing: 2px;
+            transition: background-color 3s;
+        }
+        .container-left {
+            float: left !important;
+            width: 20% !important;
+            padding: 0 !important;
+            margin-bottom: 180px;
+            height:  100% !important;
+            
+        }
+        .container-right {
+            float: left !important;
+            width: 80% !important;
+            padding: 0 !important;
+            margin:  0 !important;
+           
+        }
+        .panel {
+            border: 1px solid #f4511e !important; 
+            border-radius:0;
+            transition: box-shadow 0.3s;
+            width: 200px;
+            margin: 30px 5px 3px 10px !important;
+            float:left;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+
+        .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: #f4511e !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel-footer {
+            background-color: #fff !important;
+        }
+
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+        }
+        .sections-wrapper {
+            height: 100%;
+            width : 100%;
+            padding: 0 !important;
+            padding-top: 90px !important;
+            margin: 0 !important;
+        }
+        .footer {
+            height: 100px !important;
+            width: 100% !important;
+            text-align: center;
+            color:white;
+            background-color: #f4511e;
+            padding: 50px !important;
+            margin: 0 !important;
+        }
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        .navbar {
+            font-family: Montserrat, sans-serif;
+        }
+        #sign-up button {
+            margin:auto;
+            width: 99%;
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+            transition :box-shadow 0.3s
+        }
+        #sign-up .btn:hover, #sign-up .btn-default:hover{
+            border: 1px solid #f4511e !important;
+            background-color: #fff;
+            color: #f4511e;
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+        .navbar-header .breadcrumb a{
+            color: #f4511e !important;
+            
+        }
+        .navbar-form .input-group, .navbar-form {
+            margin: 5px;
+        }
+        .btn-default  {
+            color:#f4511e !important;
+        }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class = "navbar navbar-default navbar-fixed-top">
+            <div class = "container">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#login-form"><span class = "glyphicon glyphicon-log-in"></span></button>
+                    <a class = "navbar-brand" href = "admin_main.html"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                </div>
+                <div class = "collapse navbar-collapse" id = "login-form">
+                 <form class = 'form-inline float-right'>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  type="text" class="form-control"  placeholder="username">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                          </div>
+                        
+                        <div class="input-group">
+                          <a href = "login_header.html" class = "btn btn-default">Log In
+                            <i class="glyphicon glyphicon-log-in"></i>
+                              </a>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+        
+    <section class = "container-fluid sections-wrapper">
+        <div class = 'container container-left'>
+             <nav>
+                <ul class = 'nav nav-bar nav-stacked  li-orange'>
+                    <li>
+                        <a href="view_customer.html">View Customers
+                            </a>
+                      
+                      </li>
+                    <li>
+                        <a href="new_prodect.html">Add New Product
+                            </a>
+                      
+                      </li>
+				    <li>
+                        <a href="existing_product.html">Add Existing Product
+                            </a>
+                      
+                      </li>
+                    <li>
+                        <a  href="delete_products.html">Delete Product
+                            </a>
+                       
+                      </li>
+					<li>
+                        <a href="#">View Requests
+                          </a>
+                       
+                      </li>
+					                <li>
+                        <a href="sales.html">View Sales
+                          </a>
+                       
+                      </li>
+					  </ul>
+             </nav>
+                    <br>
+					<hr >
+			  <nav>
+			  <ul class = 'nav nav-bar nav-stacked  li-orange'>
+					<h2 style="color:#f4511e";>Categories</h2>
+					  <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Samsung</a></li>
+                          <li><a href="#">Apple</a></li>
+                          <li><a href="#">Nokia</a></li> 
+                        </ul>
+                      </li>
+                    <br>
+                </ul>
+            </nav>
+        </div>
+        <div class = "container container-right">
+            <nav class = "navbar">
+                <div class = "navbar-header navbar-brand">
+                    <ul class = "breadcrumb">
+                        <li><a href = "admin_main.html"><span class = "glyphicon glyphicon-home"></span></a></li>
+                         <li><a href = "delete_products.html?category-subcatagorey">Catagory-Subcatagory</a></li>
+                    </ul>
+                </div>
+                <form class="navbar-form navbar-right">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-warning" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+        </nav>
+        <!--here will be products-->
+            <div class = "container product-list no-pm">
+                <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                        <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+             <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                                               <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+             <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                                               <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+             <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                                               <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+             <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                                                <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+             <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                                                <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+             <div class = "panel panel-default text-center">
+                    <div class = "panel-heading">
+                        <h1>Product</h1>
+                    </div>
+                    <div class = "panel-body">
+                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
+                    </div>
+                    <div class = "panel-footer">
+                                               <h3> 90 Items</h3>
+						
+                    <form action="/action_page.php">
+                     Enter Qty:<br>
+                     <input type="number" name="quantity" value="0" >
+                     <br>
+                     </form>
+                        <button class = "btn btn-lg btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+    </section>
+    <footer>
+        <div class = "container footer">
+            <small>copyrights &copy; stockpile.Inc 2017</small>
+        </div>
+    </footer>
+   
+</body>
