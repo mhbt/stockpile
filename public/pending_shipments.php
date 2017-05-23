@@ -9,35 +9,53 @@
 ?>
     <section class =  "container-fluid sections-wrapper">
         <section class = "jumbotron user-jumbotron text-center">
-            <h2>Your Details</h2>
+            <h2>Pending Shipments</h2>
             <?php
                 include_once "../assets/scripts/php/db.php";
-                $user_details = "SELECT * FROM user "
-                    . "WHERE username = '{$_COOKIE['username']}' ";
-            //echo $user_details;
-            $result = $db->query($user_details);
+                $shipments = "SELECT o_id ID, o_status DELIVERED, o_date DATE FROM product_order "
+                    . "WHERE c_id = '{$_COOKIE['username']}' AND o_status = 'no' ";
+            //echo $purchase_history;
+            $result = $db->query($shipments);
             $data = $result->fetch_assoc();
+            $count = mysqli_num_rows($result);
+            echo "<p>Total Shipments So Far : {$count}</p>";
             ?>
             <table class="table table-hover table-responsive">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Firstname</th>
+                    <?php 
+                      if( $count > 0)
+                      {
+                          foreach ($data as $key => $value) 
+                          {
+                              echo "<th class = \"text-center\">{$key}</th>";
+                          }
+                      }
+                      ?>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Anna</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Debbie</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>John</td>
-                  </tr>
+                  
+                    <?php
+                        if( $count > 0)
+                        {
+                            for ( $i = 0; $i < $count; $i++)
+                            {
+                              echo "<tr>";
+                              foreach ($data as $key => $value) 
+                              {
+                                  echo "<td>{$value}</td>";
+                              }
+                              $data = $result->fetch_assoc();
+                              echo "</tr>";
+                            }
+                        }
+                        else 
+                        {
+                           echo "<small>No Pending shipments!.</small>";
+                        }
+                    ?>
+                      
                 </tbody>
               </table>
 

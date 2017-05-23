@@ -9,12 +9,12 @@
 ?>
     <section class =  "container-fluid sections-wrapper">
         <section class = "jumbotron user-jumbotron text-center">
-            <h2>Your Details</h2>
+            <h2>Purchase History</h2>
             <?php
                 include_once "../assets/scripts/php/db.php";
-                $purchase_history = "SELECT * FROM product_order "
+                $purchase_history = "SELECT o_id ID, o_status DELIVERED, o_date DATE FROM product_order "
                     . "WHERE c_id = '{$_COOKIE['username']}' ";
-            echo $purchase_history;
+            //echo $purchase_history;
             $result = $db->query($purchase_history);
             $data = $result->fetch_assoc();
             $count = mysqli_num_rows($result);
@@ -23,23 +23,39 @@
             <table class="table table-hover table-responsive">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Firstname</th>
+                    <?php 
+                      if( mysqli_num_rows($result) > 0)
+                      {
+                          foreach ($data as $key => $value) 
+                          {
+                              echo "<th class = \"text-center\">{$key}</th>";
+                          }
+                      }
+                      ?>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Anna</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Debbie</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>John</td>
-                  </tr>
+                  
+                    <?php
+                        if( mysqli_num_rows($result) > 0)
+                        {
+                            for ( $i = 0; $i < mysqli_num_rows($result); $i++)
+                            {
+                              echo "<tr>";
+                              foreach ($data as $key => $value) 
+                              {
+                                  echo "<td>{$value}</td>";
+                              }
+                              $data = $result->fetch_assoc();
+                              echo "</tr>";
+                            }
+                        }
+                        else 
+                        {
+                           echo "<small>You haven't purchased yet.</small>";
+                        }
+                    ?>
+                      
                 </tbody>
               </table>
 
