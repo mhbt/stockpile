@@ -72,7 +72,6 @@
 
                 $street =strtolower( $_POST['street']);
                 $house = strtolower($_POST['house']);
-                $zip = $_POST['zip'];
                 $city = strtolower($_POST['city']);
                 $state = strtolower($_POST['state']);
                 $country = strtolower($_POST['country']);
@@ -80,7 +79,7 @@
                 $query = "select username from user";
                 $result = $db->query($query);
                 $row = $result->fetch_assoc();
-                $address_details = "INSERT INTO customer_address VALUES ('{$username}', '{$street}','{$house}', '{$zip}', '{$city}','{$state}', '{$country}')";
+                $address_details = "INSERT INTO customer_address VALUES ('{$username}', '{$street}','{$house}', '{$city}','{$state}', '{$country}')";
                 if ($username == $row['username'])
                 {
                     echo("<h2>username is not available</h2>");

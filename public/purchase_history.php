@@ -12,11 +12,13 @@
             <h2>Your Details</h2>
             <?php
                 include_once "../assets/scripts/php/db.php";
-                $user_details = "SELECT * FROM user "
-                    . "WHERE username = '{$_COOKIE['username']}' ";
-            //echo $user_details;
-            $result = $db->query($user_details);
+                $purchase_history = "SELECT * FROM product_order "
+                    . "WHERE c_id = '{$_COOKIE['username']}' ";
+            echo $purchase_history;
+            $result = $db->query($purchase_history);
             $data = $result->fetch_assoc();
+            $count = mysqli_num_rows($result);
+            echo "<p>Total Purchases : {$count}</p>";
             ?>
             <table class="table table-hover table-responsive">
                 <thead>

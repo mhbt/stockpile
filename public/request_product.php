@@ -18,8 +18,7 @@
                     $manufacturer = (strtolower(trim($_POST['manufacturer'])));
                     $quantity = addslashes(strtolower(trim($_POST['quantity'])));
                     
-                    $request = "INSERT INTO request VALUES (1,'{$_COOKIE['username']}','{$product}', '{$manufacturer}', '{$quantity}')";
-                    echo $request;
+                    $request = "INSERT INTO request (c_id,p_name,p_manufacturer,p_quantity) VALUES ('{$_COOKIE['username']}','{$product}', '{$manufacturer}', {$quantity})";
                     $success = $db->query($request);
                     if( $success)
                     {

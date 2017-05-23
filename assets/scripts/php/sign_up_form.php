@@ -50,10 +50,6 @@
                     <input name = "city" type="text" class="form-control"  placeholder="" <?php if(isset($city)) echo "value = $city"; ?> required>
                 </div>
                 <div class="input-group">
-                    <span class="input-group-addon">Zip</span>
-                    <input name = "zip" type="number" class="form-control"  placeholder="" <?php if(isset($zip)) echo "value = $zip"; ?> required>
-                </div>
-                <div class="input-group">
                     <span class="input-group-addon">State</span>
                     <input name = "state" type="text" class="form-control"  placeholder="" <?php if(isset($state)) echo "value = $state"; ?> required>
                 </div>
