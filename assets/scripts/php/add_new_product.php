@@ -1,15 +1,5 @@
-<?php
-    if (isset($_COOKIE['username']))
-    {
-        include_once "../assets/scripts/php/login_header.php";
-    }
-    else {
-        echo "<a href = \"index.php\">You are required to log-in first!</a>";
-    }
-?>
-    <section class =  "container-fluid sections-wrapper">
-        <section class = "jumbotron user-jumbotron text-center">
-            <h2>Request Details</h2>
+<section class = "jumbotron admin-jumbotron text-center">
+            <h2>Product Details</h2>
             <?php
                 include_once "../assets/scripts/php/db.php";
                 if (isset($_POST["submit"]))
@@ -32,12 +22,7 @@
                 }
                 else
                 {
-                    include_once "../assets/scripts/php/request_form.php";
+                    include_once "../assets/scripts/php/add_product_form.php";
                 }
             ?>
         </section>
-</section>
-<?php
-    include_once '../assets/scripts/php/footer.php';
-   ?>
-</body>

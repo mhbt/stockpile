@@ -3,17 +3,17 @@
              <nav>
                 <ul class = 'nav nav-bar nav-stacked  li-orange'>
                        <li>
-                        <a href="../assets/scripts/php/admin_main.php?loadpage=view_customer.php">View Customers
+                        <a href="../assets/scripts/php/admin.php?page=view_customer">View Customers
                             </a>
 
                       </li>
                     <li>
-                        <a href="../assets/scripts/php/add_new_prodcut.php">Add New Product
+                        <a href="admin.php?page=add_new_product">Add New Product
                             </a>
                       
                       </li>
 				    <li>
-                        <a href="existing_product.html">Add Existing Product
+                        <a href="existing_product.html">Update Product
                             </a>
                       
                       </li>
@@ -38,11 +38,10 @@
                 </ul>
             </nav>
         </div>
-    </section>
-    <section class = "container container-right">
-        <?php include_once "../assets/scripts/php/{$_GET['loadpage']}" ?>
-    </section>
-    
+    <div class = "container container-right">
+        <?php include_once "../assets/scripts/php/{$_GET['page']}.php"; ?>
+    </div>
+</section>
     <footer>
         <div class = "container footer">
             <small>copyrights &copy; stockpile.Inc 2017</small>

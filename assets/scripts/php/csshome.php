@@ -216,4 +216,21 @@
         margin-top: 25px;
         float:right !important;
     }
+     .admin-jumbotron{
+        width : 100%;
+        margin: auto !important;
+        margin-bottom: 7% !important;
+        text-align: center;
+        background-color: rgba(244,81,30,0.01) !important;
+        box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
+        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        //border-left: 1px solid transparent;
+        //border-top: 10px solid transparent;
+        //border-top-left-radius: 10px;
+        //border-bottom-left-radius: 10px;
+    }
+    .admin-jumbotron .table-hover tr:hover{
+        color: #fff;
+        background-color: rgba(244,81,30,0.5);
+    }
 </style>
