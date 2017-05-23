@@ -64,7 +64,7 @@
     </style>
 </head>
 <body>
-
+    <?php //echo md5('sitemanager')?>
     <section class = "jumbotron container text-center">
         <form method = "POST" action = "../assets/scripts/php/session_start_admin.php">
             <field>
