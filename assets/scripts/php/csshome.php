@@ -73,7 +73,6 @@
         padding: 0 !important;
         height:  1330px !important;
         padding-top: 6px !important;
-
     }
     .container-right {
         float: left !important;
@@ -106,6 +105,7 @@
         border: 1px solid #f4511e;
         background-color: #fff !important;
         color: #f4511e;
+        background-image: none;
     }
 
     .panel-heading {
@@ -136,7 +136,8 @@
 
     .panel-footer .btn {
         margin: 15px 0;
-        background-color: #f4511e;
+        background-image: url(../assets/images/sign_up_background.jpg);
+        background-position: right;
         color: #fff;
     }
     .featured-products h2 {
