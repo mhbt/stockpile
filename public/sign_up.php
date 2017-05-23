@@ -26,7 +26,7 @@
             color: Grey !important;
         }
         .jumbotron {
-          background-color: rgba(0,0,0,0.05)!important;
+          background-color: rgba(0,0,0,0.02)!important;
         }
         .jumbotron a {
             color:#fff;
@@ -46,6 +46,10 @@
         }
         .center {
             margin: auto !important;
+        }
+        .input-group, .input-group-addon, .form-control {
+            background: transparent;
+            border: 0;
         }
     </style>
 </head>
