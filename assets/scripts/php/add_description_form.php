@@ -39,7 +39,7 @@
 </div>
     <br>
 <div class ="input-group">
-    <label>Specification :</label><textarea name = "spec" class = "form-control" max = 30 required cols = 5 rows = 5></textarea>
+    <label>Specification :</label><textarea name = "spec" class = "form-control" max = 599 required cols = 5 rows = 5></textarea>
 </div>
     <br>
 <div class ="input-group">
@@ -51,7 +51,7 @@
     {
         $id = $_POST['product'];
         $color = addslashes(trim($_POST['color']));
-        $spec = addslashes(trim($_POST['spec']));
+        $spec = htmlspecialchars(addslashes(trim($_POST['spec'])));
         $description = "INSERT INTO description (p_color,p_spec,p_id) VALUES ('{$color}','{$spec}',{$id})";
         $result = $db->query($description);
         if ($result)

@@ -32,7 +32,7 @@
                         $manufacturer = addslashes(strtolower(trim($_POST['manufacturer'])));
                         $quantity = doubleval($_POST['quantity']);
                         $price = doubleval($_POST['price']);
-                        $featured = $_POST['featured'];
+                        @ $featured = $_POST['featured'];
                         $add = "INSERT INTO products (p_name,p_category,p_manufacturer,p_qoh,p_price,image_path,featured) VALUES ('{$product}','{$category}','{$manufacturer}', {$quantity}, {$price}, '{$image_path}','{$featured}')";
                         $success = $db->query($add);
                     if( $success)

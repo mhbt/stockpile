@@ -63,7 +63,7 @@ else if (isset($_COOKIE['site_manager']))
      <h2 class = 'text-center'>Try Our Featured Products<bold>!</bold></h2>
          <?php 
                     include "../assets/scripts/php/db.php";
-                    $fetch_products = "SELECT UPPER(p_name) name, p_price price, image_path image FROM products WHERE featured = 'y'";
+                    $fetch_products = "SELECT p_id, UPPER(p_name) name, p_price price, image_path image FROM products WHERE featured = 'y'";
                     //echo $fetch_products;
                     $result = $db->query($fetch_products);
                     $p_count = mysqli_num_rows($result);
@@ -82,7 +82,7 @@ else if (isset($_COOKIE['site_manager']))
                     </div>
                     <div class = \"panel-footer\">
                         <h5><b>RS-{$product['price']}/-</b></h5>
-                        <button class = \"btn btn-lg btn-danger\">Buy</button>
+                        <a class = \"btn btn-lg btn-danger\" href = \"buy.php?id={$product['p_id']}\">Buy</a>
                     </div>
                 </div>";
                       }

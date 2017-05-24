@@ -10,7 +10,7 @@
         for ($i = 0; $i < $count; $i++)
         {
             $category_row = $category_result->fetch_assoc();
-            $brand_list = "SELECT upper(p_manufacturer) brand FROM products WHERE p_category = '{$category_row['category']}'";
+            $brand_list = "SELECT distinct upper(p_manufacturer) brand FROM products WHERE p_category = '{$category_row['category']}'";
             $brand_result = $db->query($brand_list);
             $brand_count = mysqli_num_rows($brand_result);
             //echo $brand_count;

@@ -54,7 +54,7 @@
             <div class = "container product-list no-pm">
                 <?php 
                     include "../assets/scripts/php/db.php";
-                    $fetch_products = "SELECT UPPER(p_name) name, p_price price, image_path image FROM products WHERE UPPER(p_manufacturer) = '{$_GET['brand']}' AND UPPER(p_category) = '{$_GET['category']}'";
+                    $fetch_products = "SELECT p_id, UPPER(p_name) name, p_price price, image_path image FROM products WHERE UPPER(p_manufacturer) = '{$_GET['brand']}' AND UPPER(p_category) = '{$_GET['category']}'";
                     //echo $fetch_products;
                     $result = $db->query($fetch_products);
                     $p_count = mysqli_num_rows($result);
@@ -73,7 +73,7 @@
                     </div>
                     <div class = \"panel-footer\">
                         <h5><b>RS-{$product['price']}/-</b></h5>
-                        <button class = \"btn btn-lg btn-danger\">Buy</button>
+                        <a class = \"btn btn-lg btn-danger\" href = \"buy.php?id={$product['p_id']}\">Buy</a>
                     </div>
                 </div>";
                       }
