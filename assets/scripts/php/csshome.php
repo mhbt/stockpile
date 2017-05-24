@@ -72,6 +72,7 @@
         transition: background-image 3s;
     }
     .container-left {
+        background-color:  rgba(244,81,30,0.04);
         float: left !important;
         width: 20% !important;
         padding: 0 !important;
@@ -83,6 +84,7 @@
         width: 80% !important;
         padding: 0 !important;
         margin:  0 !important;
+        //background-color:  rgba(244,81,30,0.04);
 
     }
     .carousel-indicators li {
@@ -100,20 +102,16 @@
             border-radius:0;
             transition: box-shadow 0.3s;
             width: 200px;
-            margin: 30px 5px 3px 10px !important;
+            margin: 30px 5px 3px 20px !important;
             float:left;
         }
-
+    .panel-body img {
+        height: 160px !important;
+        width: 150px !important;
+    }
         .panel:hover {
             box-shadow: 5px 0px 40px rgba(0,0,0, .2);
         }
-
-        .panel-footer .btn:hover {
-            border: 1px solid #f4511e;
-            background-color: #fff !important;
-            color: #f4511e;
-        }
-
         .panel-heading {
             color: #fff !important;
             background-image: url(../assets/images/sign_up_background.jpg);
@@ -138,11 +136,11 @@
             color: #aaa;
             font-size: 14px;
         }
-
-        .panel-footer .btn {
-            margin: 15px 0;
-            background-color: #f4511e;
-            color: #fff;
+     .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+            background-image: none;
         }
 
     .panel-footer .btn {

@@ -20,4 +20,7 @@
 <div class ="input-group">
     <button name = "submit" class = "form-controlform-input btn btn-warning btn-request" type = "submit" value = "add new product">ADD</button>
 </div>
+<div class ="input-group" style = "float:right;border:0!important;background:transparent!important">
+    <small>Featured :</small><input name = "featured" type ="checkbox" value = "y" class = "form-control">
+</div>
 </form>

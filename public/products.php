@@ -54,95 +54,31 @@
             <div class = "container product-list no-pm">
                 <?php 
                     include "../assets/scripts/php/db.php";
-                    $fetch_products = "SELECT "
+                    $fetch_products = "SELECT UPPER(p_name) name, p_price price, image_path image FROM products WHERE UPPER(p_manufacturer) = '{$_GET['brand']}' AND UPPER(p_category) = '{$_GET['category']}'";
+                    //echo $fetch_products;
+                    $result = $db->query($fetch_products);
+                    $p_count = mysqli_num_rows($result);
+                    //echo $p_count;
+                    if ($p_count > 0)
+                    {
+                      for($i = 0; $i < $p_count; $i++)
+                      {
+                          $product = $result->fetch_assoc();
+                          echo "<div class = \"panel panel-default text-center\">
+                    <div class = \"panel-heading\">
+                        <h4>{$product['name']}</h4>
+                    </div>
+                    <div class = \"panel-body\">
+                        <img src = \"{$product['image']}\">
+                    </div>
+                    <div class = \"panel-footer\">
+                        <h5><b>RS-{$product['price']}/-</b></h5>
+                        <button class = \"btn btn-lg btn-danger\">Buy</button>
+                    </div>
+                </div>";
+                      }
+                    }
                 ?>
-                
-                <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-             <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-             <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-             <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-             <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-             <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-             <div class = "panel panel-default text-center">
-                    <div class = "panel-heading">
-                        <h1>Product</h1>
-                    </div>
-                    <div class = "panel-body">
-                        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                    </div>
-                    <div class = "panel-footer">
-                        <h3> $90</h3>
-                        <button class = "btn btn-lg btn-danger">Buy</button>
-                    </div>
-                </div>
-            </div>
-             
         </div>
     </section>
     <footer>

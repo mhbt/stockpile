@@ -60,125 +60,34 @@ else if (isset($_COOKIE['site_manager']))
          </div>
 
  <div class = "container container-right featured-products">
-     <h2 class = 'text-center'>Try Our Featured <span class = "glyphicon glyphicon-flag"></span>roducts<bold>!</bold></h2>
-     <div class = "row">
-         <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-             <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-         <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-         <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-
-         </div>
-     <div class = "row">
-         <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-             <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-         <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-         <div class = "col-sm-3">
-             <div class = "panel panel-default text-center">
-                 <div class = "panel-heading">
-                     <h1>Product</h1>
-                 </div>
-                 <div class = "panel-body">
-                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS70QOkeuTKhgCcVBdT39WRq7nytV2jhZnPSA9MReUX0DSJoIz-">
-                 </div>
-                 <div class = "panel-footer">
-                     <h3> $90</h3>
-                     <button class = "btn btn-lg btn-danger">Buy</button>
-                 </div>
-             </div>
-             </div>
-
-         </div>
+     <h2 class = 'text-center'>Try Our Featured Products<bold>!</bold></h2>
+         <?php 
+                    include "../assets/scripts/php/db.php";
+                    $fetch_products = "SELECT UPPER(p_name) name, p_price price, image_path image FROM products WHERE featured = 'y'";
+                    //echo $fetch_products;
+                    $result = $db->query($fetch_products);
+                    $p_count = mysqli_num_rows($result);
+                    //echo $p_count;
+                    if ($p_count > 0)
+                    {
+                      for($i = 0; $i < $p_count; $i++)
+                      {
+                          $product = $result->fetch_assoc();
+                          echo "<div class = \"panel panel-default text-center\">
+                    <div class = \"panel-heading\">
+                        <h4>{$product['name']}</h4>
+                    </div>
+                    <div class = \"panel-body\">
+                        <img src = \"{$product['image']}\">
+                    </div>
+                    <div class = \"panel-footer\">
+                        <h5><b>RS-{$product['price']}/-</b></h5>
+                        <button class = \"btn btn-lg btn-danger\">Buy</button>
+                    </div>
+                </div>";
+                      }
+                    }
+                ?>
      </div>
  </section>
   <?php
