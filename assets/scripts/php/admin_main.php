@@ -10,7 +10,10 @@
                     <li>
                         <a href="admin.php?page=add_new_product">Add New Product
                             </a>
-                      
+                      </li>
+                    <li>
+                        <a href="admin.php?page=add_description">Add Description<br><small>to an existing product</small>
+                            </a>
                       </li>
 				    <li>
                         <a href="existing_product.html">Update Product

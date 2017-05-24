@@ -1,4 +1,8 @@
 <style>
+    .navbar .form-control, .navbar .input-group-addon {
+        border: 0;
+        background: transparent;
+    }
     .input-group,.navbar .dropdown {
         margin-top: 17px;
     }
@@ -92,47 +96,54 @@
     }
 
     .panel {
-        border: 1px solid #f4511e !important;
-        border-radius:0;
-        transition: box-shadow 0.3s;
-    }
+            border: 1px solid #f4511e !important; 
+            border-radius:0;
+            transition: box-shadow 0.3s;
+            width: 200px;
+            margin: 30px 5px 3px 10px !important;
+            float:left;
+        }
 
-    .panel:hover {
-        box-shadow: 10px 10px 10px 10px rgba(244,130,4, .2);
-    }
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
 
-    .panel-footer .btn:hover {
-        border: 1px solid #f4511e;
-        background-color: #fff !important;
-        color: #f4511e;
-        background-image: none;
-    }
+        .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+        }
 
-    .panel-heading {
-        color: #fff !important;
-        //background-color: #f4511e !important;
-        background-image: url(../assets/images/sign_up_background.jpg);
-        background-position: left;
-        padding: 25px;
-        border-bottom: 1px solid transparent;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
+        .panel-heading {
+            color: #fff !important;
+            background-image: url(../assets/images/sign_up_background.jpg);
+            background-position: left;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
 
-    .panel-footer {
-        background-color: #fff !important;
-    }
+        .panel-footer {
+            background-color: #fff !important;
+        }
 
-    .panel-footer h3 {
-        font-size: 32px;
-    }
+        .panel-footer h3 {
+            font-size: 32px;
+        }
 
-    .panel-footer h4 {
-        color: #aaa;
-        font-size: 14px;
-    }
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+        }
 
     .panel-footer .btn {
         margin: 15px 0;
@@ -233,4 +244,11 @@
         color: #fff;
         background-color: rgba(244,81,30,0.5);
     }
+    .navbar-header .breadcrumb a{
+            color: #f4511e !important;
+            
+        }
+        .navbar-form .input-group, .navbar-form {
+            margin: 5px;
+        }
 </style>

@@ -14,60 +14,14 @@ else if (isset($_COOKIE['site_manager']))
      <!--<?php  var_dump($GLOBALS); ?>-->
      <div class = 'container container-left'>
           <nav>
-             <ul class = 'nav nav-stacked  li-orange'>
-                 <li class="dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
-                         <span class="caret"></span></a>
-                     <ul class="dropdown-menu">
-                       <li><a href="products.html">Samsung</a></li>
-                       <li><a href="products.html">Apple</a></li>
-                       <li><a href="products.html">Nokia</a></li>
-                     </ul>
-                   </li>
-                 <li class="dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
-                         <span class="caret"></span></a>
-                     <ul class="dropdown-menu">
-                       <li><a href="#">Samsung</a></li>
-                       <li><a href="#">Apple</a></li>
-                       <li><a href="#">Nokia</a></li>
-                     </ul>
-                   </li>
-                 <li class="dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
-                         <span class="caret"></span></a>
-                     <ul class="dropdown-menu">
-                       <li><a href="#">Samsung</a></li>
-                       <li><a href="#">Apple</a></li>
-                       <li><a href="#">Nokia</a></li>
-                     </ul>
-                   </li>
-                 <li class="dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
-                         <span class="caret"></span></a>
-                     <ul class="dropdown-menu">
-                       <li><a href="#">Samsung</a></li>
-                       <li><a href="#">Apple</a></li>
-                       <li><a href="#">Nokia</a></li>
-                     </ul>
-                   </li>
-                 <li class="dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "right"href="#">Mobile
-                         <span class="caret"></span></a>
-                     <ul class="dropdown-menu">
-                       <li><a href="#">Samsung</a></li>
-                       <li><a href="#">Apple</a></li>
-                       <li><a href="#">Nokia</a></li>
-                     </ul>
-                   </li>
-                 <br>
-                 <?php
-                 if (!isset($_COOKIE['username']))
-                 {
-                  echo "<a id = \"sign-up\" href= \"sign_up.php\"><button  class = \"btn btn-default btn-long btn-lg\">Sign Up</button></a>";
-                 }
-                 ?>
-             </ul>
+             <?php include_once("../assets/scripts/php/product_category.php"); ?>
+             <br>
+             <?php
+             if (!isset($_COOKIE['username']))
+             {
+              echo "<a id = \"sign-up\" href= \"sign_up.php\"><button  class = \"btn btn-default btn-long btn-lg\">Sign Up</button></a>";
+             }
+             ?>
          </nav>
      </div>
  <div class = 'container container-right'>
