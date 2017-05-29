@@ -13,7 +13,7 @@
             <h2>Pending Shipments</h2>
             <?php
                 include_once "../assets/scripts/php/db.php";
-                $shipments = "SELECT o_id ID, o_status DELIVERED, o_date DATE FROM product_order "
+                $shipments = "SELECT o_id 'ORDER ID', o_status DELIVERED, o_date DATE FROM product_order "
                     . "WHERE c_id = '{$_COOKIE['username']}' AND o_status = 'no' ";
             //echo $purchase_history;
             $result = $db->query($shipments);
@@ -47,8 +47,9 @@
                               {
                                   echo "<td>{$value}</td>";
                               }
+                              echo "<td><a class = \"li-orange\" href = 'order_details.php?order_id={$data['ORDER ID']}'>View</a></td>";
                               $data = $result->fetch_assoc();
-                              echo "</tr>";
+                              echo "</a></tr>";
                             }
                         }
                         else 

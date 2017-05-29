@@ -10,6 +10,7 @@
       $fetch_product = "SELECT UPPER(p_name) name, p_price price, image_path image, p_qoh FROM products WHERE p_id = {$id}";
       //$fetch_descriptions = "SELECT d_id, UPPER(p_color) color, UPPER(p_spec) FROM description WHERE p_id = {$id}";
       $result = $db->query($fetch_product);
+    
       if (!mysqli_num_rows($result) > 0)
       {
           die("database query failed");

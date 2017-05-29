@@ -14,7 +14,7 @@
             <?php
                 include_once "../assets/scripts/php/db.php";
                 $purchase_history = "SELECT o_id ID, o_status DELIVERED, o_date DATE FROM product_order "
-                    . "WHERE c_id = '{$_COOKIE['username']}' ";
+                    . "WHERE c_id = '{$_COOKIE['username']}'AND LOWER(o_status) = 'yes'";
             //echo $purchase_history;
             $result = $db->query($purchase_history);
             $data = $result->fetch_assoc();
