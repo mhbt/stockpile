@@ -27,7 +27,7 @@ else
 <div class = "container-fluid" >
     <section class = "jumbotron admin-jumbotron">
         <div class = "container thumbnail">
-           <?php echo "<img src =\"{$product['image']}\" class = \"img img-responsive\">";
+           <?php echo "<img src =\"{$product['image']}\" class = \"img img-responsive\" width = 200px height = 200px>";
             echo "<div class = \"caption\"><p>{$product['name']}</p></div>";
             echo "<div class = \"caption\"><p>Price: RS-{$product['price']}/-</p></div>";
             ?>
