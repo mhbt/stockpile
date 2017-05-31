@@ -41,7 +41,10 @@
     }
     echo "<td>{$product_data['p_sold']}</td>";
     echo "</tr>";
+    $total_cost = $product_data['p_sold'] * $product['Price'];
+    echo "<tr><td colspan = 4>Total Payable Amount in (RS)</td> <td>{$total_cost}/-</td></tr>";
     echo "<table>";
  ?>
+ <a href = "purchase_history.php">Go to Purchase History..</a>
     </body>
  </html>
