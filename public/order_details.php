@@ -3,6 +3,7 @@
     <head lang = "en">
         <title>Order Reciept</title>
         <meta charset = "utf-8">
+        <meta http-equiv="refresh" content="0">
         <link href = "../assets/styles/reciept.css" type = "text/css" rel = "stylesheet">
     </head>
     <body>

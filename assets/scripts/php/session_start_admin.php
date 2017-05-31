@@ -17,11 +17,12 @@
             setcookie('site_manager',$username,time () + 60 * 60 * 10,'/');
             if ($data['username'] == 'admin')
             {
+                //admin has logged in.. go for admin page
                 header("Location:../../../public/admin.php?page=add_new_product");
             }
             else {
-                //moiz chui code-header_rabbit.php
-                echo "he is chutiya";
+                //order manager has logged in... go for order.php page
+                header("Location:../../../public/order.php");
             }
         }
         else

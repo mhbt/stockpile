@@ -226,6 +226,7 @@
         float:right !important;
     }
      .admin-jumbotron{
+        padding-top:50px;
         width : 100%;
         margin: auto !important;
         margin-bottom: 7% !important;
@@ -249,4 +250,67 @@
         .navbar-form .input-group, .navbar-form {
             margin: 5px;
         }
+    .heading-orange {
+        color: #f4511e;
+        padding: 20px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .heading-main {
+        padding: 150px;
+    }
+    .order-jumbotron{
+        width : 70%;
+        padding: 2px !important;
+        margin: auto !important;
+        margin-top: 1% !important;
+        margin-bottom: 1% !important;
+        background-color: rgba(244,81,30,0.01) !important;
+        box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
+        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-left: 1px solid transparent;
+        border-top: 10px solid transparent;
+        border-radius: 10px;
+    }
+    .ordermanager-jumbotron{
+        padding-top:50px;
+        padding-bottom:50px;
+        width : 100%;
+        margin: auto !important;
+        margin-bottom: 7% !important;
+        background-color: rgba(244,81,30,0.01) !important;
+        box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
+        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        //border-left: 1px solid transparent;
+        //border-top: 10px solid transparent;
+        //border-top-left-radius: 10px;
+        //border-bottom-left-radius: 10px;
+    }
+    .order-glyphicon {
+        color: #f4511e;
+    }
+    .order-inf {
+        float:left;
+        width: 50%;
+    }
+    .customer-inf {
+        float:right;
+        width: 50%;
+    }
+    .ordermanager-jumbotron p {
+        font-size: 1em !important;
+        margin-left: 25px;
+    }
+    .ordermanager-jumbotron .table-hover tr:hover{
+        color: #fff;
+        background-color: rgba(244,81,30,0.5);
+    }
+     .ordermanager-jumbotron .table{
+        text-align: center;
+    }
+    .ordermanager-jumbotron form input{
+        margin-left: 40% !important;
+        margin-right: 40% !important;
+        margin-bottom: 5px;
+    }
 </style>

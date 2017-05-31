@@ -24,7 +24,7 @@
             <div class = "container">
                 <div class = "navbar-header">
                     <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#user"><span class = "glyphicon glyphicon-user"></span></button>
-                    <a class = "navbar-brand" href = "admin.php?page=add_new_product"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
+                    <a class = "navbar-brand" href =<?php if($_COOKIE['site_manager']== 'admin') echo "admin.php?page=add_new_product"; else if($_COOKIE['site_manager']== 'ordermanager') echo "order.php";?>> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
                 </div>
                 <div class = "collapse navbar-collapse navbar-right" id = "user">
                   <ul class = 'nav nav-bar nav-stacked  li-orange'>
