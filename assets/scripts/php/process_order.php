@@ -5,6 +5,8 @@
         $p_id = $_GET['id'];
         $quantity = $_POST['quantity'];
         $username = $_COOKIE['username'];
+        $update_qoh = "UPDATE products SET p_qoh = (p_qoh - {$quantity}) WHERE p_id =  {$p_id}";
+        $db->query($update_qoh);
         $check_orders = "SELECT o_id FROM product_order WHERE c_id = '{$username}'";
         $result = $db->query($check_orders);
         $count = mysqli_num_rows($result);

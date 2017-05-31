@@ -3,13 +3,12 @@
     <head lang = "en">
         <title>Order Reciept</title>
         <meta charset = "utf-8">
-        <meta http-equiv="refresh" content="0">
         <link href = "../assets/styles/reciept.css" type = "text/css" rel = "stylesheet">
     </head>
     <body>
 <?php
     include "../assets/scripts/php/db.php";
-    $order_details = "SELECT o_name 'Order', o_status 'Delivered', o_date 'Date' FROM product_order WHERE o_id = '{$_GET['order_id']}'";
+    $order_details = "SELECT o_name 'Order', o_status 'Dispatched', o_date 'Date' FROM product_order WHERE o_id = '{$_GET['order_id']}'";
     $order_result = $db->query($order_details);
     $order_data = $order_result->fetch_assoc();
     $product_details = "SELECT p_id, p_sold FROM customer_order WHERE o_id = '{$_GET['order_id']}'";

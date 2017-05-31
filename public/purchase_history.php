@@ -5,27 +5,27 @@
     }
     else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
-        die ();
+        die();
     }
 ?>
     <section class =  "container-fluid sections-wrapper">
         <section class = "jumbotron user-jumbotron text-center">
-            <h2>Purchase History</h2>
+            <h2>Pending Shipments</h2>
             <?php
                 include_once "../assets/scripts/php/db.php";
-                $purchase_history = "SELECT o_id ID, o_status DELIVERED, o_date DATE FROM product_order "
-                    . "WHERE c_id = '{$_COOKIE['username']}'AND LOWER(o_status) = 'yes'";
+                $shipments = "SELECT o_id 'ORDER ID', o_status DISPATCHED, o_date DATE FROM product_order "
+                    . "WHERE c_id = '{$_COOKIE['username']}'";
             //echo $purchase_history;
-            $result = $db->query($purchase_history);
+            $result = $db->query($shipments);
             $data = $result->fetch_assoc();
             $count = mysqli_num_rows($result);
-            echo "<p>Total Purchases : {$count}</p>";
+            echo "<p>Total Shipments So Far : {$count}</p>";
             ?>
             <table class="table table-hover table-responsive">
                 <thead>
                   <tr>
                     <?php 
-                      if( mysqli_num_rows($result) > 0)
+                      if( $count > 0)
                       {
                           foreach ($data as $key => $value) 
                           {
@@ -38,22 +38,23 @@
                 <tbody>
                   
                     <?php
-                        if( mysqli_num_rows($result) > 0)
+                        if( $count > 0)
                         {
-                            for ( $i = 0; $i < mysqli_num_rows($result); $i++)
+                            for ( $i = 0; $i < $count; $i++)
                             {
                               echo "<tr>";
                               foreach ($data as $key => $value) 
                               {
                                   echo "<td>{$value}</td>";
                               }
+                              echo "<td><a class = \"li-orange\" href = 'order_details.php?order_id={$data['ORDER ID']}'>View</a></td>";
                               $data = $result->fetch_assoc();
-                              echo "</tr>";
+                              echo "</a></tr>";
                             }
                         }
                         else 
                         {
-                           echo "<small>You haven't purchased yet.</small>";
+                           echo "<small>No Pending shipments!.</small>";
                         }
                     ?>
                       
