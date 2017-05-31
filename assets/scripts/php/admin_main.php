@@ -3,7 +3,7 @@
              <nav>
                 <ul class = 'nav nav-bar nav-stacked  li-orange'>
                        <li>
-                        <a href="../assets/scripts/php/admin.php?page=view_customer">View Customers
+                        <a href="admin.php?page=view_customer">View Customers
                             </a>
 
                       </li>
@@ -14,11 +14,6 @@
                     <li>
                         <a href="admin.php?page=add_description">Add Description<br><small>to an existing product</small>
                             </a>
-                      </li>
-				    <li>
-                        <a href="existing_product.html">Update Product
-                            </a>
-                      
                       </li>
                     <li>
                         <a  href="delete_products.html">Delete Product

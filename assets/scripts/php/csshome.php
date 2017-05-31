@@ -217,6 +217,9 @@
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
+    .table th{
+        text-align: center;
+    }
     .user-jumbotron .table-hover tr:hover{
         color: #fff;
         background-color: rgba(244,81,30,0.5);
@@ -312,5 +315,10 @@
         margin-left: 40% !important;
         margin-right: 40% !important;
         margin-bottom: 5px;
+    }
+    .admin-jumbotron .table th {
+      background-image: url(../assets/images/sign_up_background.jpg);
+     background-position: bottom;   
+    color: #fff !important;
     }
 </style>
