@@ -326,4 +326,8 @@
         border-radius: 10px;
         box-shadow: 5px 0px 10px 5px rgba(244,81,30, .2);
     }
+    .bg-red {
+        background-color: rgba(244,81,30,.5);
+        color: #fff;
+    }
 </style>

@@ -3,7 +3,8 @@
              <nav>
                 <ul class = 'nav nav-bar nav-stacked  li-orange'>
                     <li><a href="order.php?view=orders">View Orders</a></li>
-                    <li><a href="order.php?view=requests">View Request</a></li>
+                    <li><a href="order.php?view=stock">Manage Inventory</a></li>
+                    <li><a href="order.php?view=osp">View OSP</a></li>
                 </ul>
             </nav>
         </div>
