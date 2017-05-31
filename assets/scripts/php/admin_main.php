@@ -16,17 +16,12 @@
                             </a>
                       </li>
                     <li>
-                        <a  href="delete_products.html">Delete Product
-                            </a>
-                       
-                      </li>
-                    <li>
-                        <a href="#">View Requests
+                        <a href="admin.php?page=manage_requests">Manage Product Requests
                           </a>
                        
                       </li>
 					                    <li>
-                        <a href="sales.html">View Sales
+                        <a href="admin.php?page=sales">View Sales
                           </a>
                        
                       </li>

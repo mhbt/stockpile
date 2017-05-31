@@ -321,4 +321,9 @@
      background-position: bottom;   
     color: #fff !important;
     }
+    .sales-total {
+        float:right !important;
+        border-radius: 10px;
+        box-shadow: 5px 0px 10px 5px rgba(244,81,30, .2);
+    }
 </style>
