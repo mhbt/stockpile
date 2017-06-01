@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
-            background-image: url("../assets/images/sign_up_background.jpg");
+            background-image: url("assets/images/sign_up_background.jpg");
             background-position: center;
             background-size: auto;
         }
@@ -41,7 +41,7 @@
             color: grey;
         }
         .btn-primary {
-            background-image: url("../assets/images/sign_up_background.jpg");
+            background-image: url("assets/images/sign_up_background.jpg");
             background-position: center;
             border-color: #fff;
             color :#f4511e;
@@ -66,7 +66,7 @@
 <body>
     <?php //echo md5('sitemanager')?>
     <section class = "jumbotron container text-center">
-        <form method = "POST" action = "../assets/scripts/php/session_start_admin.php">
+        <form method = "POST" action = "assets/scripts/php/session_start_admin.php">
             <field>
                 <legend>Admin Login</legend>
                 <small>Username</small>

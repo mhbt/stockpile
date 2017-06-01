@@ -1,12 +1,12 @@
 <?php
   if (isset($_COOKIE['username'])) {
-    include_once("../assets/scripts/php/login_header.php");
+    include_once("assets/scripts/php/login_header.php");
       if (!isset($_GET['id']))
       {
           die("<a href = \"index.php\">Select Product to buy first</a>");
       }
      $id = $_GET['id'];
-    include_once("../assets/scripts/php/db.php");
+    include_once("assets/scripts/php/db.php");
       $fetch_product = "SELECT UPPER(p_name) name, p_price price, image_path image, p_qoh FROM products WHERE p_id = {$id}";
       //$fetch_descriptions = "SELECT d_id, UPPER(p_color) color, UPPER(p_spec) FROM description WHERE p_id = {$id}";
       $result = $db->query($fetch_product);
@@ -44,7 +44,7 @@ else
             </div>
         </div>
         </div>
-        <form class = "form-inline" method = "POST" action = "http://localhost/stockpile/assets/scripts/php/process_order.php?<?php echo "id=$id";?>">
+        <form class = "form-inline" method = "POST" action = "assets/scripts/php/process_order.php?<?php echo "id=$id";?>">
             <div class = "input-group">
                 <label>Product Qunatity (<?php echo "{$product['p_qoh']}" ?> available): &nbsp;&nbsp;</label>
                 <input class = "" name = "quantity" type="number" value = 1 max =<?php echo "{$product['p_qoh']}" ?>>

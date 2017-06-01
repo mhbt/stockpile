@@ -25,7 +25,7 @@
         $fill_product = "INSERT INTO customer_order VALUES ({$o_id},{$p_id},{$quantity})";
         $result =$db->query($fill_product);
         //echo $result;
-        header("Location:../../../public/order_details.php?order_id={$o_id}");
+        header("Location:../../../order_details.php?order_id={$o_id}");
         
     }
     

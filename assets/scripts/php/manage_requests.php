@@ -28,7 +28,7 @@
     ?></td>
     <td><?php echo $req["c_id"];
     ?></td>
-    <td><a href =<?php echo"../assets/scripts/php/delete_request.php?request={$req['req_id']}"; ?>>delete</a></td>
+    <td><a href =<?php echo"assets/scripts/php/delete_request.php?request={$req['req_id']}"; ?>>delete</a></td>
     </tr>
     <?php 
     }?>

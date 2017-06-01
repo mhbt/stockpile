@@ -1,7 +1,7 @@
 <?php
     if (isset($_COOKIE['username']))
     {
-        include_once "../assets/scripts/php/login_header.php";
+        include_once "assets/scripts/php/login_header.php";
     }
     else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
@@ -12,7 +12,7 @@
         <section class = "jumbotron user-jumbotron text-center">
             <h2>Request Details</h2>
             <?php
-                include_once "../assets/scripts/php/db.php";
+                include_once "assets/scripts/php/db.php";
                 if (isset($_POST["submit"]))
                 {
                     $product = addslashes(strtolower(trim($_POST['product'])));
@@ -33,12 +33,12 @@
                 }
                 else
                 {
-                    include_once "../assets/scripts/php/request_form.php";
+                    include_once "assets/scripts/php/request_form.php";
                 }
             ?>
         </section>
 </section>
 <?php
-    include_once '../assets/scripts/php/footer.php';
+    include_once 'assets/scripts/php/footer.php';
    ?>
 </body>

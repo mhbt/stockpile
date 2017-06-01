@@ -1,7 +1,7 @@
 <?php
     if (isset($_COOKIE['username']))
     {
-        include_once "../assets/scripts/php/login_header.php";
+        include_once "assets/scripts/php/login_header.php";
     }
     else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
@@ -12,9 +12,9 @@
         <section class = "jumbotron user-jumbotron text-center">
             <h2>Pending Shipments</h2>
             <?php
-                include_once "../assets/scripts/php/db.php";
-                $shipments = "SELECT o_id 'ORDER ID', o_status DISPATCHED, o_date DATE FROM product_order "
-                    . "WHERE c_id = '{$_COOKIE['username']}'";
+                include_once "assets/scripts/php/db.php";
+                $shipments = "SELECT o_id 'ORDER ID', o_status DELIVERED, o_date DATE FROM product_order "
+                    . "WHERE c_id = '{$_COOKIE['username']}' AND o_status = 'no' ";
             //echo $purchase_history;
             $result = $db->query($shipments);
             $data = $result->fetch_assoc();
@@ -64,6 +64,6 @@
         </section>
         
 <?php
-    include_once '../assets/scripts/php/footer.php';
+    include_once 'assets/scripts/php/footer.php';
    ?>
 </body>

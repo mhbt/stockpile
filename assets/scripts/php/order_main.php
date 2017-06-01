@@ -11,7 +11,7 @@
     <div class = "container container-right">
         <?php 
             if(isset($_GET['view']))
-                include_once "../assets/scripts/php/{$_GET['view']}.php";   
+                include_once "assets/scripts/php/{$_GET['view']}.php";   
             else
                 echo "<h1 class = \"text-center heading-orange heading-main\">Welcome to Order and Request management portal.</h1>";
 

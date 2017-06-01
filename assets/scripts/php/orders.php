@@ -1,5 +1,5 @@
 <?php
-    include_once "../assets/scripts/php/db.php";
+    include_once "assets/scripts/php/db.php";
     //fetch orders
     $order_query = "SELECT * FROM product_order WHERE UPPER(o_status) = 'NO'";
     $order_result = $db->query($order_query);
@@ -63,7 +63,7 @@
         }
         echo "<tbody>";
         echo "</table>";
-        echo "<form method = \"POST\" action = \"../assets/scripts/php/dispatch.php\"><input name = \"o_id\" value ={$order['o_id']} \"\" type = \"text\" class = \"hidden\"><input class = \"btn btn-warning\" name = \"submit\"type = \"submit\" value = \"Confirm Dispatch\"></form>";
+        echo "<form method = \"POST\" action = \"assets/scripts/php/dispatch.php\"><input name = \"o_id\" value ={$order['o_id']} \"\" type = \"text\" class = \"hidden\"><input class = \"btn btn-warning\" name = \"submit\"type = \"submit\" value = \"Confirm Dispatch\"></form>";
         echo "</section>";
     }
 ?>

@@ -1,20 +1,20 @@
 <?php
   if (isset($_COOKIE['username'])) {
-    include_once("../assets/scripts/php/login_header.php");
+    include_once("assets/scripts/php/login_header.php");
   }
 else if (isset($_COOKIE['site_manager']))
 {
-    include_once("../assets/scripts/php/admin_login_header.php");
+    include_once("assets/scripts/php/admin_login_header.php");
 }
   else {
-    include_once("../assets/scripts/php/visitor_header.php");
+    include_once("assets/scripts/php/visitor_header.php");
   }
  ?>
  <section class = "container-fluid sections-wrapper">
      <!--<?php  var_dump($GLOBALS); ?>-->
      <div class = 'container container-left'>
           <nav>
-             <?php include_once("../assets/scripts/php/product_category.php"); ?>
+             <?php include_once("assets/scripts/php/product_category.php"); ?>
              <br>
              <?php
              if (!isset($_COOKIE['username']))
@@ -62,7 +62,7 @@ else if (isset($_COOKIE['site_manager']))
  <div class = "container container-right featured-products">
      <h2 class = 'text-center'>Try Our Featured Products<bold>!</bold></h2>
          <?php 
-                    include "../assets/scripts/php/db.php";
+                    include "assets/scripts/php/db.php";
                     $fetch_products = "SELECT p_id, UPPER(p_name) name, p_price price, image_path image FROM products WHERE featured = 'y'";
                     //echo $fetch_products;
                     $result = $db->query($fetch_products);
@@ -101,6 +101,6 @@ else if (isset($_COOKIE['site_manager']))
      </div>
  </section>
   <?php
-    include_once '../assets/scripts/php/footer.php';
+    include_once 'assets/scripts/php/footer.php';
    ?>
  </body>

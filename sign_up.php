@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
-            background-image: url("../assets/images/sign_up_background.jpg");
+            background-image: url("assets/images/sign_up_background.jpg");
             background-position: center;
             background-size: cover;
         }
@@ -61,7 +61,7 @@
     
             if (isset($_POST["submit"]))
             {
-                include_once ("../assets/scripts/php/db.php");
+                include_once ("assets/scripts/php/db.php");
                 //getting values from post method _POST;
                 $username = strtolower($_POST['username']);
                 $password = md5($_POST['password']);
@@ -87,7 +87,7 @@
                 if ($username == $row['username'])
                 {
                     echo("<h2>username is not available</h2>");
-                    include_once ("../assets/scripts/php/sign_up_form.php");
+                    include_once ("assets/scripts/php/sign_up_form.php");
                     die ();
                 }
                 
@@ -98,7 +98,7 @@
                 echo "<a href = \"index.php\">Continue to login page...</a>";
             }
             else {
-                include_once ("../assets/scripts/php/sign_up_form.php");
+                include_once ("assets/scripts/php/sign_up_form.php");
             }
 
 

@@ -1,7 +1,7 @@
 <?php
     if (isset($_COOKIE['username']))
     {
-        include_once "../assets/scripts/php/login_header.php";
+        include_once "assets/scripts/php/login_header.php";
     }
     else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
@@ -12,7 +12,7 @@
         <section class = "jumbotron user-jumbotron text-center">
             <h2>Your Details</h2>
             <?php
-                include_once "../assets/scripts/php/db.php";
+                include_once "assets/scripts/php/db.php";
                 $user_details = "SELECT u.username  USERNAME,  u.email EMAIL,  upper(concat(c.c_fname, ' ',c.c_lname)) NAME,  upper(concat(house_no,',',street_no,',',city,',',state,',',country)) ADDRESS FROM user u, customer c, customer_address a "
                     . "WHERE u.username = '{$_COOKIE['username']}' "
                         . "AND c.username = '{$_COOKIE['username']}' "
@@ -35,6 +35,6 @@
         </section>
         
 <?php
-    include_once '../assets/scripts/php/footer.php';
+    include_once 'assets/scripts/php/footer.php';
    ?>
 </body>

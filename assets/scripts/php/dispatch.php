@@ -12,6 +12,6 @@
 <html>
     <head>
         <meta charset= "utf-8">
-        <meta http-equiv="refresh" content="0;URL='../../../public/order.php?view=orders'" />
+        <meta http-equiv="refresh" content="0;URL='../../../order.php?view=orders'" />
     </head>
 </html>

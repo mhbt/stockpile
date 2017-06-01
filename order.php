@@ -4,8 +4,8 @@ if (isset($_COOKIE['site_manager']))
 {
    if( $_COOKIE['site_manager'] == 'ordermanager')
    {
-       include_once("../assets/scripts/php/admin_login_header.php");
-       include_once "../assets/scripts/php/order_main.php";
+       include_once("assets/scripts/php/admin_login_header.php");
+       include_once "assets/scripts/php/order_main.php";
 
 
    }

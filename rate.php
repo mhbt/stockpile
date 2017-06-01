@@ -1,6 +1,6 @@
 <?php
   if (isset($_COOKIE['username'])) {
-    include_once("../assets/scripts/php/login_header.php");
+    include_once("assets/scripts/php/login_header.php");
       if (!isset($_GET['id']))
       {
           die("<a href = \"index.php\">Select Product to rate it first!</a>");
@@ -21,7 +21,7 @@ else
                 {
                     $c_id = $_COOKIE['username'];
                     $rating = $_POST['rating'];
-                    include_once("../assets/scripts/php/db.php");
+                    include_once("assets/scripts/php/db.php");
                     $delete_prev_rating = "DELETE FROM rate_products WHERE c_id = '{$c_id}' AND p_id = {$p_id}";
                     $db->query($delete_prev_rating);
                     $rate_it = "INSERT INTO rate_products (c_id,p_id,stars) VALUES ('$c_id', $p_id, $rating)";
@@ -32,7 +32,7 @@ else
                 }
                 else
                 {
-                    include_once("../assets/scripts/php/db.php");
+                    include_once("assets/scripts/php/db.php");
                     $product = "SELECT p_name, image_path image FROM products WHERE p_id = {$p_id}";
                     $result = $db->query($product);
                     $data = $result->fetch_assoc();

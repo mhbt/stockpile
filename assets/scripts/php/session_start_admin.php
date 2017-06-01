@@ -18,22 +18,22 @@
             if ($data['username'] == 'admin')
             {
                 //admin has logged in.. go for admin page
-                header("Location:../../../public/admin.php?page=add_new_product");
+                header("Location:../../../admin.php?page=add_new_product");
             }
             else {
                 //order manager has logged in... go for order.php page
-                header("Location:../../../public/order.php");
+                header("Location:../../../order.php");
             }
         }
         else
         {
             
             setcookie('login_failed',$password,time() + 1,'/');
-           header("Location:../../../public/admin.php");
+           header("Location:../../../admin.php");
         }     
     }
     else {
         setcookie('login_failed','failed',time() + 1,'/');
-       header("Location:../../../public/admin.php");
+       header("Location:../../../admin.php");
         }
 ?>

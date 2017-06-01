@@ -26,7 +26,7 @@
     }
     .navbar-default {
        // background-color: #f4511e !important;
-        background-image: url(../assets/images/sign_up_background.jpg);
+        background-image: url(assets/images/sign_up_background.jpg);
         background-position: center;
         color: white !important;
         padding: 1.5% !important;
@@ -66,7 +66,7 @@
     }
     .li-orange a:hover {
         //background-color: #f4511e !important;
-        background-image: url(../assets/images/sign_up_background.jpg);
+        background-image: url(assets/images/sign_up_background.jpg);
         background-position: right;
         color:white !important;
         transition: background-image 3s;
@@ -114,7 +114,7 @@
         }
         .panel-heading {
             color: #fff !important;
-            background-image: url(../assets/images/sign_up_background.jpg);
+            background-image: url(assets/images/sign_up_background.jpg);
             background-position: left;
             padding: 25px;
             border-bottom: 1px solid transparent;
@@ -145,7 +145,7 @@
 
     .panel-footer .btn {
         margin: 15px 0;
-        background-image: url(../assets/images/sign_up_background.jpg);
+        background-image: url(assets/images/sign_up_background.jpg);
         background-position: right;
         color: #fff;
     }
@@ -165,7 +165,7 @@
         float:none;
         text-align: center;
         color:white;
-        background-image: url(../assets/images/sign_up_background.jpg);
+        background-image: url(assets/images/sign_up_background.jpg);
         background-position: bottom;
         padding: 50px !important;
         margin: 0 !important;
@@ -187,7 +187,7 @@
         margin:auto;
         width: 99%;
         margin: 15px 0;
-        background-image: url(../assets/images/sign_up_background.jpg);
+        background-image: url(assets/images/sign_up_background.jpg);
         background-position: right;
         color: #fff;
         transition :box-shadow 0.3s
@@ -211,7 +211,7 @@
         text-align: center;
         background-color: rgba(244,81,30,0.01) !important;
         box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
-        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-image: url(assets/images/sign_up_background.jpg) 20 stretch;
         border-left: 1px solid transparent;
         border-top: 10px solid transparent;
         border-top-left-radius: 10px;
@@ -236,7 +236,7 @@
         text-align: center;
         background-color: rgba(244,81,30,0.01) !important;
         box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
-        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-image: url(assets/images/sign_up_background.jpg) 20 stretch;
         //border-left: 1px solid transparent;
         //border-top: 10px solid transparent;
         //border-top-left-radius: 10px;
@@ -270,7 +270,7 @@
         margin-bottom: 1% !important;
         background-color: rgba(244,81,30,0.01) !important;
         box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
-        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-image: url(assets/images/sign_up_background.jpg) 20 stretch;
         border-left: 1px solid transparent;
         border-top: 10px solid transparent;
         border-radius: 10px;
@@ -283,7 +283,7 @@
         margin-bottom: 7% !important;
         background-color: rgba(244,81,30,0.01) !important;
         box-shadow: 10px 10px 10px 2px rgba(244,81,30, 0.5);
-        border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-image: url(assets/images/sign_up_background.jpg) 20 stretch;
         //border-left: 1px solid transparent;
         //border-top: 10px solid transparent;
         //border-top-left-radius: 10px;
@@ -317,7 +317,7 @@
         margin-bottom: 5px;
     }
     .admin-jumbotron .table th {
-      background-image: url(../assets/images/sign_up_background.jpg);
+      background-image: url(assets/images/sign_up_background.jpg);
      background-position: bottom;   
     color: #fff !important;
     }
@@ -338,7 +338,7 @@
         text-align: center;
         background-color: rgba(244,81,30,0.01) !important;
         box-shadow: 2px 2px 10px 2px rgba(244,81,30, 0.5);
-        //border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        //border-image: url(assets/images/sign_up_background.jpg) 20 stretch;
         border-left: 1px solid transparent;
         border-top: 10px solid transparent;
         border-top-left-radius: 10px;

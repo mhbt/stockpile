@@ -2,7 +2,7 @@
         <section class = "jumbotron admin-jumbotron text-center">
             <h2 class = "heading-orange">Inventory</h2>
             <?php
-                include_once "../assets/scripts/php/db.php";
+                include_once "assets/scripts/php/db.php";
                 $product = "SELECT p_id 'Product ID', upper(p_name) 'Product Name', upper(p_category) 'Category', upper(p_manufacturer) 'Manufacturer', p_price 'Price', p_qoh Quantity FROM products";
             $result = $db->query($product);
             $data = $result->fetch_assoc();
@@ -38,7 +38,7 @@
                               {
                                   echo "<td>{$value}</td>";
                               }
-                              echo "<form method = \"POST\" action = \"../assets/scripts/php/update_stock.php\">";
+                              echo "<form method = \"POST\" action = \"assets/scripts/php/update_stock.php\">";
                               echo "<td><input name = \"quantity_added\" type = \"number\" class = \"form-control\" required></td>";
                               echo "<td hidden><input name = \"product_id\" type = \"number\" class = \"form-control\" value = \"{$data['Product ID']}\" hidden></td>";
                               echo "<td><input name = \"update\" type = \"submit\" class = \"form-control btn btn-danger\" value = \"Update\"></td>";

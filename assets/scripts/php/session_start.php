@@ -15,17 +15,17 @@ echo $query;
         if ($data['password'] == $password && $data['status'] == 'customer')
         {
             setcookie('username',$username,time () + 60 * 60 * 10,'/');
-            header("Location:../../../public/index.php");
+            header("Location:../../../index.php");
         }
         else
         {
             
             setcookie('login_failed',$password,time() + 1,'/');
-             header("Location:../../../public/index.php");
+             header("Location:../../../index.php");
         }
     }
     else {
         setcookie('login_failed','failed',time() + 1,'/');
-         header("Location:../../../public/index.php");
+         header("Location:../../../index.php");
     }
 ?>

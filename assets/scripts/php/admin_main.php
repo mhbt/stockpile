@@ -32,7 +32,7 @@
             </nav>
         </div>
     <div class = "container container-right">
-        <?php include_once "../assets/scripts/php/{$_GET['page']}.php"; ?>
+        <?php include_once "assets/scripts/php/{$_GET['page']}.php"; ?>
     </div>
 </section>
     <footer>

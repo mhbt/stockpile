@@ -1,5 +1,5 @@
 <?php
-    include_once "../assets/scripts/php/db.php";
+    include_once "assets/scripts/php/db.php";
     $category_list = "SELECT DISTINCT UPPER(p_category) category FROM products";
     $category_result = $db->query($category_list);
     $count  = mysqli_num_rows($category_result);

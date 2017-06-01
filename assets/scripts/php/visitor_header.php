@@ -26,7 +26,7 @@
                     <a class = "navbar-brand" href = "index.php"> <h2 class = 'no-pm'> STOC<span class = 'glyphicon glyphicon-shopping-cart'></span>PILE</h2></a>
                 </div>
                 <div class = "collapse navbar-collapse" id = "login-form">
-                 <form method = "post" action = "../assets/scripts/php/session_start.php" class = 'form-inline float-right'>
+                 <form method = "post" action = "assets/scripts/php/session_start.php" class = 'form-inline float-right'>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input name = "username" type="text" class="form-control"  placeholder="username">

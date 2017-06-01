@@ -39,7 +39,7 @@
                             ?>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu text-center">
-                            <li><a href = "../assets/scripts/php/admin_session_end.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout </a></li>
+                            <li><a href = "assets/scripts/php/admin_session_end.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout </a></li>
                         </ul>
                       </li>
                     </ul>

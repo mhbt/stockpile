@@ -8,7 +8,7 @@
                      //moving image to server
                     if (isset($_FILES['file']))
                     {
-                        $image_path = "../assets/images/products/" . $_FILES['file']['name'];
+                        $image_path = "assets/images/products/" . $_FILES['file']['name'];
                         if ($_FILES['file']['size'] > 0)
                         {
                             if($_FILES['file']['size'] < 1024 * 500)
@@ -48,7 +48,7 @@
                 }
                 else
                 {
-                    include_once "../assets/scripts/php/add_product_form.php";
+                    include_once "assets/scripts/php/add_product_form.php";
                 }
             ?>
         </section>

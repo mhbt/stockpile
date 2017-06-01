@@ -43,7 +43,7 @@
                             <li><a href =  "purchase_history.php"><span class = "glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;Purchase History</a></li>
                             <!--<li><a href =  "pending_shipments.php"><span class = "glyphicon glyphicon-road"></span>&nbsp;&nbsp;&nbsp;Pending Shipments</a></li>-->
                             <li><a href =  "request_product.php"><span class = "glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;Request A Product</a></li>
-                            <li><a href = "../assets/scripts/php/session_end.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout </a></li>
+                            <li><a href = "assets/scripts/php/session_end.php"><span class = "glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout </a></li>
                         </ul>
                       </li>
                     </ul>
