@@ -1,13 +1,13 @@
 <?php
-    if (isset($_COOKIE['username']))
-    {
-        include_once "assets/scripts/php/login_header.php";
-    }
-    else {
+  session_start();
+  if (isset($_SESSION['username'])) {
+    include_once("assets/scripts/php/login_header.php");
+  }
+   else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
-        die ();
+        die();
     }
-?>
+ ?> 
     <section class =  "container-fluid sections-wrapper">
         <section class = "jumbotron user-jumbotron text-center">
             <h2>Your Details</h2>
@@ -26,7 +26,7 @@
                   <?php
                     foreach($data as $key => $value)
                     {
-                      echo "<tr><td>{$key}</td><td>{$value}</td>";
+                      echo "<tr><td>{$key}</td><td><b>:</b> {$value}</td>";
                     }       
                     ?>
                 </tbody>

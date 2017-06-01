@@ -1,11 +1,12 @@
 <?php
-  if (isset($_COOKIE['username'])) {
+  session_start();
+  if (isset($_SESSION['username'])) {
     include_once("assets/scripts/php/login_header.php");
   }
-else if (isset($_COOKIE['site_manager']))
-{
-    include_once("assets/scripts/php/admin_login_header.php");
-}
+// else if (isset($_COOKIE['site_manager']))
+// {
+//     include_once("assets/scripts/php/admin_login_header.php");
+// }
   else {
     include_once("assets/scripts/php/visitor_header.php");
   }

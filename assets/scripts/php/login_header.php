@@ -1,4 +1,4 @@
-
+//cannot set_up session in here
 <!DOCTYPE html>
 <head>
     <title>Stockpile</title>
@@ -32,9 +32,9 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" data-placement = "down"href="#">
                             <span >Hey! </span>
                             <?php 
-                                if (isset($_COOKIE))
+                                if (isset($_SESSION['username']))
                                 {
-                                    echo "{$_COOKIE['username']}&nbsp;";
+                                    echo "{$_SESSION['username']}&nbsp;";
                                 }
                             ?>
                             <span class="caret"></span></a>

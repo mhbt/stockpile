@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  if (isset($_SESSION['username'])) {
+  }
+  else {
+      echo "<a href = \"index.php\">Login To see order details</a>";
+      die();
+  }
+ ?> 
+
 <!DOCTYPE html>
 <html>
     <head lang = "en">

@@ -14,11 +14,13 @@
         echo $data['password']; 
         if ($data['password'] == $password && ($data['status'] == 'admin' || $data['status'] == 'ordermanager'))
         {
+            session_start();
+            $_SESSION['site_manager']= $username;
             setcookie('site_manager',$username,time () + 60 * 60 * 10,'/');
             if ($data['username'] == 'admin')
             {
                 //admin has logged in.. go for admin page
-                header("Location:../../../admin.php?page=add_new_product");
+                header("Location:../../../admin.php?page=view_customer");
             }
             else {
                 //order manager has logged in... go for order.php page

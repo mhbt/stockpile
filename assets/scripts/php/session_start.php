@@ -1,6 +1,6 @@
 <?php
     echo $_POST['username'];
-    $username = strtolower($_POST['username']);
+    $username =strtolower($_POST['username']);
     $password = md5($_POST['password']);
     include_once 'db.php';
     $query = "SELECT * "
@@ -14,6 +14,8 @@ echo $query;
         $data = $result->fetch_assoc();
         if ($data['password'] == $password && $data['status'] == 'customer')
         {
+            session_start();
+            $_SESSION['username'] = $username;
             setcookie('username',$username,time () + 60 * 60 * 10,'/');
             header("Location:../../../index.php");
         }

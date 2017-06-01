@@ -1,13 +1,13 @@
 <?php
-    if (isset($_COOKIE['username']))
-    {
-        include_once "assets/scripts/php/login_header.php";
-    }
-    else {
+  session_start();
+  if (isset($_SESSION['username'])) {
+    include_once("assets/scripts/php/login_header.php");
+  }
+   else {
         echo "<a href = \"index.php\">You are required to log-in first!</a>";
         die();
     }
-?>
+ ?> 
     <section class =  "container-fluid sections-wrapper">
         <section class = "jumbotron user-jumbotron text-center">
             <h2>Pending Shipments</h2>

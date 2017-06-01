@@ -32,7 +32,16 @@
             </nav>
         </div>
     <div class = "container container-right">
-        <?php include_once "assets/scripts/php/{$_GET['page']}.php"; ?>
+        <?php 
+            if(isset($_GET['page']))
+            {
+                include_once "assets/scripts/php/{$_GET['page']}.php";
+            }
+            else
+            {
+                echo "<h1 class = \"text-center heading-orange heading-main\">Welcome to Admin's management portal.</h1>";
+            }
+         ?>
     </div>
 </section>
     <footer>
