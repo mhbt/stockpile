@@ -64,18 +64,28 @@
                       for($i = 0; $i < $p_count; $i++)
                       {
                           $product = $result->fetch_assoc();
+                          $get_rating = "SELECT AVG(stars) stars FROM rate_products WHERE p_id = {$product['p_id']}";
+                          $rating_result = $db->query($get_rating);
+                          @ $rating = $rating_result->fetch_assoc();
+                          $rating_result->free();
+                          $rating = (int) $rating['stars'];
                           echo "<div class = \"panel panel-default text-center\">
-                    <div class = \"panel-heading\">
-                        <h4>{$product['name']}</h4>
-                    </div>
-                    <div class = \"panel-body\">
-                        <img src = \"{$product['image']}\">
-                    </div>
-                    <div class = \"panel-footer\">
-                        <h5><b>RS-{$product['price']}/-</b></h5>
-                        <a class = \"btn btn-lg btn-danger\" href = \"buy.php?id={$product['p_id']}\">Buy</a>
-                    </div>
-                </div>";
+                            <div class = \"panel-heading\">
+                                <h4>{$product['name']}</h4>
+                            </div>
+                            <div class = \"panel-body\">
+                                <img src = \"{$product['image']}\">
+                            </div>
+                            <div class = \"panel-footer\"><p>";
+                            for ($j = 0; $j < $rating; $j++)
+                            {
+                                echo "<span class =\"glyphicon glyphicon-star-empty\"></span>";
+                            }
+                                
+                            echo "</p><h5><b>RS-{$product['price']}/-</b></h5>
+                                <a class = \"btn btn-lg btn-danger\" href = \"buy.php?id={$product['p_id']}\">Buy</a>
+                            </div>
+                        </div>";
                       }
                     }
                 ?>

@@ -26,11 +26,23 @@ else
 <section class = "container-fluid sections-wrapper">
 <div class = "container-fluid" >
     <section class = "jumbotron admin-jumbotron">
-        <div class = "container thumbnail">
-           <?php echo "<img src =\"{$product['image']}\" class = \"img img-responsive\" width = \"200\" height = \"200\">";
-            echo "<div class = \"caption\"><p>{$product['name']}</p></div>";
-            echo "<div class = \"caption\"><p>Price: RS-{$product['price']}/-</p></div>";
-            ?>
+    <div class = "container thumbnail">
+        <div class = "row">
+            <div class = "col-sm-4">
+            </div>
+
+            <div class = "col-sm-4">
+            <?php echo "<img src =\"{$product['image']}\" class = \"img img-responsive img-thumbnail\" width = \"200\" height = \"200\">"; ?>
+                <?php
+
+                echo "<div class = \"\"><p>{$product['name']}</p></div>";
+                echo "<div class = \"\"><p>Price: RS-{$product['price']}/-</p></div>";
+                ?>
+            </div>
+            <div class = "col-sm-4">
+               
+            </div>
+        </div>
         </div>
         <form class = "form-inline" method = "POST" action = "http://localhost/stockpile/assets/scripts/php/process_order.php?<?php echo "id=$id";?>">
             <div class = "input-group">
@@ -40,6 +52,9 @@ else
             &nbsp;
             <div class = "input-group">
                 <input class = "btn btn-default" name = "buy" type="submit" value ="Buy"<?php if($product['p_qoh'] < 1) echo "disabled"?>>
+            </div>
+            <div class = "input-group">
+                <a href = <?php echo"rate.php?id={$id}"; ?>>Rate It </a>
                 
             </div>
         </form>

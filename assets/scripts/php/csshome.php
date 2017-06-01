@@ -330,4 +330,32 @@
         background-color: rgba(244,81,30,.5);
         color: #fff;
     }
+  .rate-jumbotron{
+        width : 30%;
+        margin: auto !important;
+        margin-top: 7% !important;
+        margin-bottom: 7% !important;
+        text-align: center;
+        background-color: rgba(244,81,30,0.01) !important;
+        box-shadow: 2px 2px 10px 2px rgba(244,81,30, 0.5);
+        //border-image: url(../assets/images/sign_up_background.jpg) 20 stretch;
+        border-left: 1px solid transparent;
+        border-top: 10px solid transparent;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .rate-jumbotron .form-control {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .rate-jumborton img {
+        height : 200px !important;
+        width : 200px !important;
+    }
+    .heading-orange-less-pm {
+        color: #f4511e;
+        padding: 2px;
+        text-transform: uppercase;
+        text-align: center;
+    }
 </style>
