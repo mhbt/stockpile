@@ -1,7 +1,8 @@
 <?php
-  if (isset($_COOKIE['username'])) {
+  session_start();
+  if (isset($_SESSION['username'])) {
     include_once("assets/scripts/php/login_header.php");
-      if (!isset($_GET['id']))
+     if (!isset($_GET['id']))
       {
           die("<a href = \"index.php\">Select Product to buy first</a>");
       }
@@ -17,11 +18,14 @@
       }
       $product = $result->fetch_assoc();
   }
-else
-{
-  die("<a href = \"index.php\">Login First to buy a product! Happy Shoping...</a> "); 
-}
-?>
+// else if (isset($_COOKIE['site_manager']))
+// {
+//     include_once("assets/scripts/php/admin_login_header.php");
+// }
+  else {
+    die("<a href = \"index.php\">Login First to buy a product! Happy Shoping...</a> "); 
+  }
+ ?>
 <br>
 <section class = "container-fluid sections-wrapper">
 <div class = "container-fluid" >

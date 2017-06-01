@@ -1,4 +1,3 @@
-//cannot set_up session in here
 <!DOCTYPE html>
 <head>
     <title>Stockpile</title>

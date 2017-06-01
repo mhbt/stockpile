@@ -1,4 +1,20 @@
 <?php
+  session_start();
+  if (isset($_SESSION['username'])) {
+    include_once("assets/scripts/php/login_header.php");
+     if (!isset($_GET['id']))
+      {
+          die("<a href = \"index.php\">Select Product to rate it first!</a>");
+      }
+     $p_id = $_GET['id'];
+  }
+  else {
+    die("<a href = \"index.php\">Login First to rate a product! Happy Rating...</a> "); 
+
+  }
+ ?>
+    
+    <?php
   if (isset($_COOKIE['username'])) {
     include_once("assets/scripts/php/login_header.php");
       if (!isset($_GET['id']))
