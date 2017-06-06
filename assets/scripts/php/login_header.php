@@ -17,7 +17,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload = "count_products(); list_products(); calc_cost();">
     <header>
         <nav class = "navbar navbar-default navbar-fixed-top">
             <div class = "container">
@@ -50,3 +50,4 @@
             </div>
         </nav>
     </header>
+<?php include_once "cart.php" ?>

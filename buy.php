@@ -48,22 +48,49 @@
             </div>
         </div>
         </div>
-        <form class = "form-inline" method = "POST" action = "assets/scripts/php/process_order.php?<?php echo "id=$id";?>">
+        <form id = "add-to-cart-form" class = "form-inline"  onsubmit = "add_to_cart(); count_products(); list_products(); calc_cost(); return false;">
             <div class = "input-group">
-                <label>Product Qunatity (<?php echo "{$product['p_qoh']}" ?> available): &nbsp;&nbsp;</label>
-                <input class = "" name = "quantity" type="number" value = 1 max =<?php echo "{$product['p_qoh']}" ?>>
+                <label>Product Qunatity (<?php echo "{$product['p_qoh']} available" ?>): &nbsp;&nbsp;</label>
+                <input class = "" id = "quantity" type="number" value = 1  min = 1 max =<?php echo "{$product['p_qoh']}"?>>
             </div>
             &nbsp;
             <div class = "input-group">
-                <input class = "btn btn-default" name = "buy" type="submit" value ="Buy"<?php if($product['p_qoh'] < 1) echo "disabled"?>>
+                <input class = "btn btn-default" id = "add-to-cart" type="submit" value ="Add To Cart"<?php if($product['p_qoh'] < 1) echo "disabled"?>>
             </div>
             <div class = "input-group">
                 <a href = <?php echo"rate.php?id={$id}"; ?>>Rate It </a>
-                
             </div>
-        </form>
+            </form>
 
     </section>
     
 </div>
 </section>
+<script>
+    function add_to_cart()
+    {
+        var xhttp = new XMLHttpRequest();
+        _("add-to-cart").disabled = true;
+        _("add-to-cart").value = "Processing..Please Wait";
+        var id = <?php echo $id; ?>;
+        var name = <?php echo "'{$product['name']}'"; ?>;
+        var quantity = document.getElementById("quantity").value;
+        var data = "id="+ id + "&name=" + name + "&quantity=" + quantity;
+        data= encodeURI(data);
+        xhttp.open("POST","assets/scripts/php/add_to_cart.php",true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(data);
+       // console.log(data);
+        xhttp.onreadystatechange = function () {
+            if(xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                _("add-to-cart").value = xhttp.responseText;
+            }
+        }
+    }
+    function _(id)
+    {
+        return document.getElementById(id);
+    }        
+
+</script>

@@ -358,4 +358,69 @@
         text-transform: uppercase;
         text-align: center;
     }
+    body ~ .cart {
+        position: relative;
+    }
+    .cart .panel{
+        z-index: 1;
+        position: fixed;
+        right:1%;
+        bottom:0%;
+        padding: 0;
+        border: none !important;
+        width : 300px;
+        margin: 0 !important;
+        box-shadow: 1px 1px 10px 2px rgba(0,0,0, .5);
+        
+    }
+    .left {
+        float:left !important;
+        width : 90%;
+    }
+    .right {
+        float:right !important; 
+        width: 10%;
+    }
+    .bg-cart {
+        background-color: #ffae42 !important;
+    }
+    .cart .panel .panel-title {
+        width: 100%;
+        padding: 5px;
+        color: #fff;
+        border: 1px solid rgba(0,0,0,0.2);
+    }
+    .cart .panel .panel-title :hover {
+        cursor: pointer !important;
+    }
+    .panel .cart-name {
+        width: 90%;
+    }
+    .cart-inside .item {
+        width :100%;
+    }
+    .item-name {
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+    .item .item-remove {
+        background: none;
+    }
+    .cart .panel-body {
+        //border-bottom: 1px solid #ffae42;
+    }
+    .cart .panel-footer {
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin-bottom: 5px !important;
+    }
+    .cart .panel-footer a {
+        color: black;
+        font-size: 20px;
+        margin-bottom: 5px !important;
+    } 
+   .cart .panel-footer a :hover{
+        color: #ffae42;
+    } 
 </style>
