@@ -26,6 +26,11 @@
             box-shadow: 5px 0px 40px  rgba(0,.7,.1, .9);
             color: #fff !important;
         }
+         @media screen and (max-width: 768px) {
+        .container {
+            width:100%;
+        }
+      }
         .jumbotron {
           background-color: rgba(0,0,0,0.015)!important;
           border-radius: 10px;
@@ -68,7 +73,7 @@
     <section class = "jumbotron container text-center">
         <form method = "POST" action = "assets/scripts/php/session_start_admin.php">
             <field>
-                <legend>Admin Login</legend>
+                <legend>Administration Login</legend>
                 <small>Username</small>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

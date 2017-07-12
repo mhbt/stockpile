@@ -33,12 +33,13 @@
         margin-bottom: 2% !important;
     }
     @media screen and (max-width: 768px) {
-        .col-sm-4 {
-          text-align: center;
-          margin: 25px 0;
-        }
         .navbar-default .input-group {
             float: right;
+        }
+      }
+       @media screen and (max-width: 768px) {
+        .carousel {
+            display:none;
         }
       }
     .no-pm {
@@ -60,6 +61,8 @@
         float:right;
         margin:auto;
         margin-top: 7px;
+        margin-left: 2px;
+        margin-right:2px;
     }
     .li-orange a{
         color:#f4511e !important;
@@ -76,14 +79,14 @@
         float: left !important;
         width: 20% !important;
         padding: 0 !important;
-        height:  1330px !important;
+       height:  1000px !important;
         padding-top: 6px !important;
     }
     .container-right {
         float: left !important;
         width: 80% !important;
         padding: 0 !important;
-        margin:  0 !important;
+        margin:  0% !important;
         //background-color:  rgba(244,81,30,0.04);
 
     }
@@ -185,7 +188,7 @@
     }
     #sign-up button {
         margin:auto;
-        width: 99%;
+        width: 100%;
         margin: 15px 0;
         background-image: url(assets/images/sign_up_background.jpg);
         background-position: right;

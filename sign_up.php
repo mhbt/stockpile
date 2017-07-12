@@ -25,6 +25,11 @@
             box-shadow: 5px 0px 40px  rgba(0,.7,.1, .9);
             color: Grey !important;
         }
+          @media screen and (max-width: 768px) {
+        .container {
+            width:100%;
+        }
+      }
         .jumbotron {
           background-color: rgba(0,0,0,0.02)!important;
         }

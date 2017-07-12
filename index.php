@@ -44,7 +44,7 @@
                      <img src="https://www.hotelzurpost.info/wp-content/uploads/2015/11/shooping_sightseeing.jpg" alt="Chania" width="460" height="200">
                    </div>
                      <div class="item">
-                     <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8_XhdS51_FmvFB1So-rJ7iz7yLMShJQ00jc3BqSejAou-ceV8LQ" alt="Chania" width="460" height="200">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-lJ5s_gXpEoE9tOB3KzdFmuCBa1p32bLEPiZmCbSU51xP_xVE" alt="Chania" width="460" height="200">
                        </div>
                      <!-- Left and right controls -->
                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
